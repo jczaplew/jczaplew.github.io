@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>John J Czaplewski</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css' />
+    <style>
+    html, body, .container-fluid, #titleRow {
+      height: 102%;
+    }
+    body {
+      padding-top:0;
+      padding-bottom: 40px;
+      background-image: url('../img/pw_maze_white.png');
+    }
+    .container-fluid {
+      padding-left:0;
+      padding-right: 0;
+    }
+    .row {
+      margin-right:0;
+      margin-left:0;
+    }
+    #titleHolder {
+      width:100%;
+      height:95%;
+      text-align: center;
+      background-color:#B7C11E;
+      display: table;
+    }
+    .titleContent {
+      color: #F5F5F5;
+      display: table-cell;
+      vertical-align: middle;
+      font-family: 'Exo', sans-serif;
+    }
+    .titleContent > h1 {
+      font-size:4em;
+      letter-spacing: 0.1em;
+    }
+    .socialMedia {
+      padding-right: 8px;
+      color: #F5F5F5;
+    }
+    .socialMedia:hover {
+      color: #23A38F;
+    }
+    #triangle {
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      background-color: #B7C11E;
+      transform: rotate(45deg);
+      bottom: 0;
+      margin-bottom: -15px;
+      left: 49%;
+      z-index: 2;
+    }
+    .toc {
+      text-align: center;
+      padding:20px;
+      margin-top:-40px;
+      background-color: #ffffff;
+      color:#bbb;
+    }
+    .toc:hover {
+      color: #23A38F;
+      cursor: pointer;
+    }
+    .content > h1 {
+      padding: 30px 20px;
+    }
+    #projects {
+      background-color: #589494;
+      color: #F5F5F5;
+    }
+    #presentations {
+      background-color: #8EBBB4;
+      color: #F5F5F5;
+    }
+    #resume {
+      background-color: #D0DCD0;
+    }
+    @media(max-width: 675px) {
+      .toc > h2 {
+        font-size: 20px;
+      }
+    }
+    @media(max-width: 475px) {
+      .toc > h2 {
+        font-size: 15px;
+      }
+    }
+    </style>
+
+    <script type="text/javascript">
+    // GA goes here
+    </script>
+
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row" id="titleRow">
+        <div class="col-sm-12" id="titleHolder">
+          <div class="titleContent">
+            <h1>John J Czaplewski</h1>
+            <h4>Developer | Cartographer | Data Hacker</h4>
+            <a class="socialMedia" href="http://twitter.com/johnjcz">
+              <i class="fa fa-twitter fa-2x"></i>
+            </a>
+            <a class="socialMedia" href="http://github.com/jczaplew">
+              <i class="fa fa-github fa-2x"></i>
+            </a>
+            <a class="socialMedia" href="http://stackoverflow.com/users/1956065/jczaplew">
+              <i class="fa fa-stack-overflow fa-2x"></i>
+            </a>
+            <a class="socialMedia" href="http://www.linkedin.com/in/johnjcz">
+              <i class="fa fa-linkedin fa-2x"></i>
+            </a>
+            <div id="triangle"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-xs-4 toc">
+          <h2>Projects</h2>
+        </div>
+        <div class="col-xs-4 toc">
+          <h2>Presentations</h2>
+        </div>
+        <div class="col-xs-4 toc">
+          <h2>R&#233;sum&#233;/CV</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 content" id="projects">
+          <h1>Projects</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 content" id="presentations">
+          <h1>Publications/Presentations</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 content" id="resume">
+          <h1>R&#233;sum&#233; / Curriculum Vitae
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
