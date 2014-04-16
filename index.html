@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css' />
     <style>
-    html, body, .container-fluid, #titleRow {
-      height: 102%;
-    }
+      html, body, .container-fluid, #titleRow {
+        height: 102%;
+        position: relative;
+      }
     body {
       padding-top:0;
       padding-bottom: 40px;
@@ -56,7 +57,7 @@
       background-color: #B7C11E;
       transform: rotate(45deg);
       bottom: 0;
-      margin-bottom: -15px;
+      margin-bottom: 25px;
       left: 49%;
       z-index: 2;
     }
@@ -78,16 +79,291 @@
       background-color: #589494;
       color: #F5F5F5;
     }
-    #presentations {
-      background-color: #8EBBB4;
+    .project {
+      background-color: rgba(88, 148, 148, 0.8);
+      color: #F5F5F5;
+      background-repeat: repeat-x;
+    }
+    .projectContainer {
+      background-color: rgba(88, 148, 148, 0.8);
+      padding: 60px;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+    .projectContainer > h2 > a {
       color: #F5F5F5;
     }
+    .projectContainer > h2 > a:hover {
+      color: #F5F5F5;
+      text-decoration: none;
+    }
+    #presentations {
+      background-color: #206978;
+      color: #F5F5F5;
+    }
+    .presentationContainer {
+      background-color: rgba(32, 105, 120, 0.8);
+      padding: 60px;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+    .presentationContainer > h3 > a {
+      color: #F5F5F5;
+    } 
+    .presentationContainer > h3 > a:hover {
+      color: #F5F5F5;
+      text-decoration: none;
+    } 
     #resume {
-      background-color: #D0DCD0;
+      background-color: #8EBBB4;
+    }
+    
+    @media(max-width: 3000px) {
+      .projectContainer {
+        padding: 60px;
+      }
+      #busmsn {
+        background-image:url('/img/high/busmsn.jpg');;
+      }
+      #navigator {
+        background-image: url('/img/high/navigator.jpg');
+      }
+      #team_usa_sochi {
+        background-image: url('/img/high/team_usa_sochi.jpg');
+      }
+      #macrostrat_map {
+        background-image:url('/img/high/macrostrat.jpg');
+      }
+      #paleobiodb {
+        background-image:url('/img/high/paleobiodb.jpg');
+      }
+      #pioneer {
+        background-image:url('/img/high/pioneer.jpg');
+      }
+      #acmp {
+        background-image:url('/img/high/acmp.jpg');
+      }
+      #michigan_basin {
+        background-image:url('/img/high/michigan_basin.jpg');
+      }
+      #webmap_template_eia {
+        background-image:url('/img/high/webmap_template_eia.jpg');
+      }
+      #webmap_template_corridors {
+        background-image:url('/img/high/webmap_template_corridors.jpg');
+      }
+      #ecycle {
+        background-image:url('/img/high/ecycle.jpg');
+      }
+      #subway {
+        background-image:url('/img/high/subway.jpg');
+      }
+      #pronounce {
+        background-image:url('/img/high/pronounce.jpg');
+      }
+      #dlccc {
+        background-image:url('/img/high/dlccc.jpg');
+      }
+      #frac_sands {
+        background-image:url('/img/high/frac_sands.jpg');
+      }
+      #policy {
+        background-image:url('/img/high/policy.jpg');
+      }
+      #renewable {
+        background-image:url('/img/high/renewable.jpg');
+      }
+      #team_usa_london {
+        background-image:url('/img/high/team_usa_london.jpg');
+      }
+      #cashfree {
+        background-image:url('/img/high/cashfree.jpg');
+      }
+      #federal_spending {
+        background-image:url('/img/high/federal_spending.jpg');
+      }
+      #hoofermountaineering {
+        background-image:url('/img/high/hoofermountaineering.jpg');
+      }
+      #jmt {
+        background-image:url('/img/high/jmt.jpg');
+      }
+      #dl_bouldering {
+        background-image:url('/img/high/dl_bouldering.jpg');
+      }
+      #europe {
+        background-image:url('/img/high/europe.jpg');
+      }
+      #obesity {
+        background-image:url('/img/high/obesity.jpg');
+      }
+    }
+    @media(max-width: 1450px) {
+      #busmsn {
+        background-image:url('/img/medium/busmsn.jpg');;
+      }
+      #navigator {
+        background-image: url('/img/medium/navigator.jpg');
+      }
+      #team_usa_sochi {
+        background-image: url('/img/medium/team_usa_sochi.jpg');
+      }
+      #macrostrat_map {
+        background-image:url('/img/medium/macrostrat.jpg');
+      }
+      #paleobiodb {
+        background-image:url('/img/medium/paleobiodb.jpg');
+      }
+      #pioneer {
+        background-image:url('/img/medium/pioneer.jpg');
+      }
+      #acmp {
+        background-image:url('/img/medium/acmp.jpg');
+      }
+      #michigan_basin {
+        background-image:url('/img/medium/michigan_basin.jpg');
+      }
+      #webmap_template_eia {
+        background-image:url('/img/medium/webmap_template_eia.jpg');
+      }
+      #webmap_template_corridors {
+        background-image:url('/img/medium/webmap_template_corridors.jpg');
+      }
+      #ecycle {
+        background-image:url('/img/medium/ecycle.jpg');
+      }
+      #subway {
+        background-image:url('/img/medium/subway.jpg');
+      }
+      #pronounce {
+        background-image:url('/img/medium/pronounce.jpg');
+      }
+      #dlccc {
+        background-image:url('/img/medium/dlccc.jpg');
+      }
+      #frac_sands {
+        background-image:url('/img/medium/frac_sands.jpg');
+      }
+      #policy {
+        background-image:url('/img/medium/policy.jpg');
+      }
+      #renewable {
+        background-image:url('/img/medium/renewable.jpg');
+      }
+      #team_usa_london {
+        background-image:url('/img/medium/team_usa_london.jpg');
+      }
+      #cashfree {
+        background-image:url('/img/medium/cashfree.jpg');
+      }
+      #federal_spending {
+        background-image:url('/img/medium/federal_spending.jpg');
+      }
+      #hoofermountaineering {
+        background-image:url('/img/medium/hoofermountaineering.jpg');
+      }
+      #jmt {
+        background-image:url('/img/medium/jmt.jpg');
+      }
+      #dl_bouldering {
+        background-image:url('/img/medium/dl_bouldering.jpg');
+      }
+      #europe {
+        background-image:url('/img/medium/europe.jpg');
+      }
+      #obesity {
+        background-image:url('/img/medium/obesity.jpg');
+      }
+    }
+    @media(max-width: 900px) {
+      .projectContainer {
+        padding: 14px 25px;
+      }
+      #busmsn {
+        background-image:url('/img/low/busmsn.jpg');;
+      }
+      #navigator {
+        background-image: url('/img/low/navigator.jpg');
+      }
+      #team_usa_sochi {
+        background-image: url('/img/low/team_usa_sochi.jpg');
+      }
+      #macrostrat_map {
+        background-image:url('/img/low/macrostrat.jpg');
+      }
+      #paleobiodb {
+        background-image:url('/img/low/paleobiodb.jpg');
+      }
+      #pioneer {
+        background-image:url('/img/low/pioneer.jpg');
+      }
+      #acmp {
+        background-image:url('/img/low/acmp.jpg');
+      }
+      #michigan_basin {
+        background-image:url('/img/low/michigan_basin.jpg');
+      }
+      #webmap_template_eia {
+        background-image:url('/img/low/webmap_template_eia.jpg');
+      }
+      #webmap_template_corridors {
+        background-image:url('/img/low/webmap_template_corridors.jpg');
+      }
+      #ecycle {
+        background-image:url('/img/low/ecycle.jpg');
+      }
+      #subway {
+        background-image:url('/img/low/subway.jpg');
+      }
+      #pronounce {
+        background-image:url('/img/low/pronounce.jpg');
+      }
+      #dlccc {
+        background-image:url('/img/low/dlccc.jpg');
+      }
+      #frac_sands {
+        background-image:url('/img/low/frac_sands.jpg');
+      }
+      #policy {
+        background-image:url('/img/low/policy.jpg');
+      }
+      #renewable {
+        background-image:url('/img/low/renewable.jpg');
+      }
+      #team_usa_london {
+        background-image:url('/img/low/team_usa_london.jpg');
+      }
+      #cashfree {
+        background-image:url('/img/low/cashfree.jpg');
+      }
+      #federal_spending {
+        background-image:url('/img/low/federal_spending.jpg');
+      }
+      #hoofermountaineering {
+        background-image:url('/img/low/hoofermountaineering.jpg');
+      }
+      #jmt {
+        background-image:url('/img/low/jmt.jpg');
+      }
+      #dl_bouldering {
+        background-image:url('/img/low/dl_bouldering.jpg');
+      }
+      #europe {
+        background-image:url('/img/low/europe.jpg');
+      }
+      #obesity {
+        background-image:url('/img/low/obesity.jpg');
+      }
     }
     @media(max-width: 675px) {
       .toc > h2 {
         font-size: 20px;
+      }
+    }
+    @media(max-width: 505px) {
+      .content > h1 {
+        font-size: 22px;
+        padding: 30px 0;
       }
     }
     @media(max-width: 475px) {
@@ -106,7 +382,7 @@
   <body>
     <div class="container-fluid">
       <div class="row" id="titleRow">
-        <div class="col-sm-12" id="titleHolder">
+        <div class="col-xs-12" id="titleHolder">
           <div class="titleContent">
             <h1>John J Czaplewski</h1>
             <h4>Developer | Cartographer | Data Hacker</h4>
@@ -122,9 +398,9 @@
             <a class="socialMedia" href="http://www.linkedin.com/in/johnjcz">
               <i class="fa fa-linkedin fa-2x"></i>
             </a>
-            <div id="triangle"></div>
           </div>
         </div>
+        <div id="triangle"></div>
       </div>
       
       <div class="row">
@@ -139,20 +415,229 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-sm-12 content" id="projects">
+      <div class="row" id="projects">
+        <div class="col-xs-12 content">
           <h1>Projects</h1>
         </div>
-      </div>
+
+        <div class="col-xs-12 project" id="busmsn">
+          <div class="projectContainer">
+            <h2><a href="http://busmsn.com">busMSN</a></h2>
+            <p>Bookmarkable, location aware live arrival times</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="navigator">
+          <div class="projectContainer">
+            <h2><a href="http://paleobiodb.org/navigator">PBDB Navigator</a></h2>
+            <p>Exploring space, time, and taxonomy</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="team_usa_sochi">
+          <div class="projectContainer">
+            <h2><a href="http://jczaplew.github.io/team-usa-sochi/">Team USA - Sochi</a></h2>
+            <p>Mapping the winter athletes of Sochi 2014</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="macrostrat_map">
+          <div class="projectContainer">
+            <h2><a href="http://macrostrat.org/map">Macrostratigraphy Map</a></h2>
+            <p>Visualizing stratigraphy over space and time</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="paleobiodb">
+          <div class="projectContainer">
+            <h2><a href="http://paleobiodb.org">Paleobiodb.org</a></h2>
+            <p>Gateway to the Paleobiology Database</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="pioneer">
+          <div class="projectContainer">
+            <h2><a href="http://jczaplew.github.io/pioneer">Hubby & Yummy</a></h2>
+            <p>A ridiculous exercise in recipe comment analysis</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="acmp">
+          <div class="projectContainer">
+            <h2><a href="http://bl.ocks.org/jczaplew/raw/6603431/">Adaptive Composite Map</a></h2>
+            <p>An implementation of the adaptive composite map project in D3.js</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="michigan_basin">
+          <div class="projectContainer">
+            <h2><a href="http://michiganbasinfossils.org">Michigan Basin Fossils</a></h2>
+            <p>Photo catalog for Friend's of the Michigan Museum of Paleontology</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="webmap_template_eia">
+          <div class="projectContainer">
+            <h2><a href="http://maps.johnjcz.com/webmap_template/eia_example">Webmap template (EIA)</a></h2>
+            <p>Webmap template created for Mid America Freight Coalition</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="webmap_template_corridors">
+          <div class="projectContainer">
+            <h2><a href="http://maps.johnjcz.com/webmap_template/corridors_example">Webmap template (Corridors)</a></h2>
+            <p>Webmap template created for Mid America Freight Coalition</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="ecycle">
+          <div class="projectContainer">
+            <h2><a href="http://maps.johnjcz.com/ecycle">Ecycle locations</a></h2>
+            <p>I couldn't figure out where to recycle electronics, so I made a map</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="subway">
+          <div class="projectContainer">
+            <h2><a href="http://maps.johnjcz.com/subway/mafc_highway_corridors.pdf">Freight corridors</a></h2>
+            <p>A subway-style map of freight corridors in the Mid America Freight Coalition</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="pronounce">
+          <div class="projectContainer">
+            <h2><a href="http://maps.sco.wisc.edu/pronouncewi">Pronounce Wisconsin</a></h2>
+            <p>Interactive pronunciation gazetteer of Wisconsin placenames</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="dlccc">
+          <div class="projectContainer">
+            <h2><a href="http://hoofermountaineering.org/mapping-the-dlccc/">DLCCC 2012</a></h2>
+            <p>A map of routes climbed during the Devil's Lake Century Climbing Challenge</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="frac_sands">
+          <div class="projectContainer">
+            <h2><a href="http://midamericafreight.org/rfs_maps/fracsands/">Frac Sands</a></h2>
+            <p>Following the expansion of frac sand mining in Chippewa County, WI</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="policy">
+          <div class="projectContainer">
+            <h2><a href="http://midamericafreight.org/rfs_maps/movement/">Policy Homogenization</a></h2>
+            <p>Visual argument for homogenizing freight policy in the midwest</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="renewable">
+          <div class="projectContainer">
+            <h2><a href="http://maps.johnjcz.com/d3/index2.html">Renewable Energy</a></h2>
+            <p>First map with D3.js. Learned and created in 40 hours.</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="team_usa_london">
+          <div class="projectContainer">
+            <h2><a href="http://maps.johnjcz.com/leaflet_team.html">Team USA - London</a></h2>
+            <p>Mapping Team USA in the 2012 London Olympics</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="cashfree">
+          <div class="projectContainer">
+            <h2><a href="http://maps.johnjcz.com/atms/cashfree.html">CashFree</a></h2>
+            <p>My credit union didn't have an ATM finder. But they had locations...</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="federal_spending">
+          <div class="projectContainer">
+            <h2><a href="http://maps.johnjcz.com/federal_spending.html">Federal Spending</a></h2>
+            <p>Data viz exercise. Found a news article, made an accompanying visualization.</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="hoofermountaineering">
+          <div class="projectContainer">
+            <h2><a href="http://hoofermountaineering.org">Hoofermountaineering.org</a></h2>
+            <p>A website for Hoofer Mountaineering Club at the University of Wisconsin</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="jmt">
+          <div class="projectContainer">
+            <h2><a href="http://maps.johnjcz.com/images/jmt.png">John Muir Trail</a></h2>
+            <p>Print map of the John Muir trail</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="dl_bouldering">
+          <div class="projectContainer">
+            <h2><a href="http://maps.johnjcz.com/images/dl_bouldering.png">Devil's Lake Bouldering</a></h2>
+            <p>Print map of bouldering on the west bluff of Devil's Lake</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="europe">
+          <div class="projectContainer">
+            <h2><a href="http://maps.johnjcz.com/images/europe.jpg">Political Europe</a></h2>
+            <p>Print map of Europe. Lab assignment in label placement.</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project" id="obesity">
+          <div class="projectContainer">
+            <h2><a href="http://maps.johnjcz.com/images/obesity.jpg">Obesity Epidemic</a></h2>
+            <p>Print map of obesity rates in the US. Lab assignment in persuassive mapping.</p>
+          </div>
+        </div>
+
+      </div> <!-- End projects -->
 
       <div class="row">
-        <div class="col-sm-12 content" id="presentations">
+        <div class="col-xs-12 content" id="presentations">
           <h1>Publications/Presentations</h1>
         </div>
+
+        <div class="col-xs-12 project">
+          <div class="presentationContainer">
+            <h3><a href="http://www.flmnh.ufl.edu/files/6813/9085/6747/NAPC_2014_Abstract_Book.pdf">Bringing Paleontology's 'Dark Data' To Light</a></h3>
+            <h5>Shanan E. Peters (presenter), Christopher Ré, Miron Livny, Ce Czhang, Vidhya Govindaraju, Michael McClennen, John J. Czaplewski</h5>
+            <p>North American Paleontological Conference 2014</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project">
+          <div class="presentationContainer">
+            <h3><a href="https://gsa.confex.com/gsa/2013AM/webprogram/Paper231359.html">Cyberinfrastructure for Plate Tectonic Reconstructions</a></h3>
+            <h5>Mark Turner (presenter), Michael Gurnis, John Cannon, Xiaodong Qin, Shanan E Peters, Puneet Kishor, John Czaplewski</h5>
+            <p>Geological Society of America Annual Conference 2013</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project">
+          <div class="presentationContainer">
+            <h3><a href="http://www.johnjcz.com/presentations/foss4g2013/">Just-in-time Spatial - Acquisition, storage, & lightweight presentation of dynamic data</a></h3>
+            <h5>John J Czaplewski, Maria Hart</h5>
+            <p>FOSS4G-NA 2013</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 project">
+          <div class="presentationContainer">
+            <h3><a href="http://johnjcz.com/presentations/pronouncewi">Points & Polys in an Audio-Visual Environment - A Wisconsin Pronunciation Gazetteer</a></h3>
+            <h5>John J Czaplewski</h5>
+            <p>Wisconsin Geospatial Summit 2013</p>
+          </div>
+        </div>
+
       </div>
 
       <div class="row">
-        <div class="col-sm-12 content" id="resume">
+        <div class="col-xs-12 content" id="resume">
           <h1>R&#233;sum&#233; / Curriculum Vitae
         </div>
       </div>
