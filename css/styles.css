@@ -1,0 +1,396 @@
+html, body, .container-fluid, #titleRow {
+    height: 102%;
+    position: relative;
+  }
+body {
+  padding-top:0;
+  padding-bottom: 40px;
+}
+.container-fluid {
+  padding-left:0;
+  padding-right: 0;
+}
+.row {
+  margin-right:0;
+  margin-left:0;
+}
+#titleHolder {
+  width:100%;
+  height:95%;
+  text-align: center;
+  background-color:#B7C11E;
+  display: table;
+}
+.titleContent {
+  color: #F5F5F5;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: 'Exo', sans-serif;
+}
+.titleContent > h1 {
+  font-size:4em;
+  letter-spacing: 0.1em;
+}
+.socialMedia {
+  padding-right: 8px;
+  color: #F5F5F5;
+}
+.socialMedia:hover {
+  color: #23A38F;
+}
+#triangle {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background-color: #B7C11E;
+  transform: rotate(45deg);
+  bottom: 0;
+  margin-bottom: 25px;
+  left: 49%;
+  z-index: 2;
+}
+.toc {
+  text-align: center;
+  padding:20px;
+  margin-top:-40px;
+  background-color: #ffffff;
+  color:#bbb;
+}
+.toc:hover {
+  color: #23A38F;
+  cursor: pointer;
+}
+.toc > a {
+  color: #bbb;
+}
+.toc > a:hover {
+  color: #23A38F;
+  text-decoration: none;
+}
+.category {
+  height: 315px;
+  display: table;
+}
+.category > h1 {
+  padding: 30px 20px;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: 'Exo', sans-serif;
+  letter-spacing: 5px;
+}
+#projects {
+  background-color: #589494;
+  color: #F5F5F5;
+}
+.project {
+  background-color: rgba(88, 148, 148, 0.8);
+  color: #F5F5F5;
+  background-repeat: repeat-x;
+}
+.projectContainer {
+  background-color: rgba(88, 148, 148, 0.7);
+  padding: 60px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.projectContainer > h2 > a {
+  color: #F5F5F5;
+}
+.projectContainer > h2 > a:hover {
+  color: #F5F5F5;
+  text-decoration: none;
+}
+#presentations {
+  background-color: #206978;
+  color: #F5F5F5;
+}
+.presentationContainer {
+  background-color: rgba(32, 105, 120, 0.8);
+  padding: 60px;
+  margin-left: -15px;
+  margin-right: -15px;
+  color: #F5F5F5;
+}
+.presentationContainer > h3 > a {
+  color: #F5F5F5;
+} 
+.presentationContainer > h3 > a:hover {
+  color: #F5F5F5;
+  text-decoration: none;
+} 
+#resume {
+  background-color: rgb(208, 168, 37);
+}
+.resume {
+  background-color: rgba(208, 168, 37, 0.8);
+}
+
+.resumeContainer {
+  padding: 60px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.resumeContainer > a {
+  color: #333;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+
+@media(max-width: 3000px) {
+  .projectContainer {
+    padding: 60px;
+  }
+  #busmsn {
+    background-image:url('/img/high/busmsn.jpg');;
+  }
+  #navigator {
+    background-image: url('/img/high/navigator.jpg');
+  }
+  #team_usa_sochi {
+    background-image: url('/img/high/team_usa_sochi.jpg');
+  }
+  #macrostrat_map {
+    background-image:url('/img/high/macrostrat.jpg');
+  }
+  #paleobiodb {
+    background-image:url('/img/high/paleobiodb.jpg');
+  }
+  #pioneer {
+    background-image:url('/img/high/pioneer.jpg');
+  }
+  #acmp {
+    background-image:url('/img/high/acmp.jpg');
+  }
+  #michigan_basin {
+    background-image:url('/img/high/michigan_basin.jpg');
+  }
+  #webmap_template_eia {
+    background-image:url('/img/high/webmap_template_eia.jpg');
+  }
+  #webmap_template_corridors {
+    background-image:url('/img/high/webmap_template_corridors.jpg');
+  }
+  #ecycle {
+    background-image:url('/img/high/ecycle.jpg');
+  }
+  #subway {
+    background-image:url('/img/high/subway.jpg');
+  }
+  #pronounce {
+    background-image:url('/img/high/pronounce.jpg');
+  }
+  #dlccc {
+    background-image:url('/img/high/dlccc.jpg');
+  }
+  #frac_sands {
+    background-image:url('/img/high/frac_sands.jpg');
+  }
+  #policy {
+    background-image:url('/img/high/policy.jpg');
+  }
+  #renewable {
+    background-image:url('/img/high/renewable.jpg');
+  }
+  #team_usa_london {
+    background-image:url('/img/high/team_usa_london.jpg');
+  }
+  #cashfree {
+    background-image:url('/img/high/cashfree.jpg');
+  }
+  #federal_spending {
+    background-image:url('/img/high/federal_spending.jpg');
+  }
+  #hoofermountaineering {
+    background-image:url('/img/high/hoofermountaineering.jpg');
+  }
+  #jmt {
+    background-image:url('/img/high/jmt.jpg');
+  }
+  #dl_bouldering {
+    background-image:url('/img/high/dl_bouldering.jpg');
+  }
+  #europe {
+    background-image:url('/img/high/europe.jpg');
+  }
+  #obesity {
+    background-image:url('/img/high/obesity.jpg');
+  }
+}
+@media(max-width: 1450px) {
+  #busmsn {
+    background-image:url('/img/medium/busmsn.jpg');;
+  }
+  #navigator {
+    background-image: url('/img/medium/navigator.jpg');
+  }
+  #team_usa_sochi {
+    background-image: url('/img/medium/team_usa_sochi.jpg');
+  }
+  #macrostrat_map {
+    background-image:url('/img/medium/macrostrat.jpg');
+  }
+  #paleobiodb {
+    background-image:url('/img/medium/paleobiodb.jpg');
+  }
+  #pioneer {
+    background-image:url('/img/medium/pioneer.jpg');
+  }
+  #acmp {
+    background-image:url('/img/medium/acmp.jpg');
+  }
+  #michigan_basin {
+    background-image:url('/img/medium/michigan_basin.jpg');
+  }
+  #webmap_template_eia {
+    background-image:url('/img/medium/webmap_template_eia.jpg');
+  }
+  #webmap_template_corridors {
+    background-image:url('/img/medium/webmap_template_corridors.jpg');
+  }
+  #ecycle {
+    background-image:url('/img/medium/ecycle.jpg');
+  }
+  #subway {
+    background-image:url('/img/medium/subway.jpg');
+  }
+  #pronounce {
+    background-image:url('/img/medium/pronounce.jpg');
+  }
+  #dlccc {
+    background-image:url('/img/medium/dlccc.jpg');
+  }
+  #frac_sands {
+    background-image:url('/img/medium/frac_sands.jpg');
+  }
+  #policy {
+    background-image:url('/img/medium/policy.jpg');
+  }
+  #renewable {
+    background-image:url('/img/medium/renewable.jpg');
+  }
+  #team_usa_london {
+    background-image:url('/img/medium/team_usa_london.jpg');
+  }
+  #cashfree {
+    background-image:url('/img/medium/cashfree.jpg');
+  }
+  #federal_spending {
+    background-image:url('/img/medium/federal_spending.jpg');
+  }
+  #hoofermountaineering {
+    background-image:url('/img/medium/hoofermountaineering.jpg');
+  }
+  #jmt {
+    background-image:url('/img/medium/jmt.jpg');
+  }
+  #dl_bouldering {
+    background-image:url('/img/medium/dl_bouldering.jpg');
+  }
+  #europe {
+    background-image:url('/img/medium/europe.jpg');
+  }
+  #obesity {
+    background-image:url('/img/medium/obesity.jpg');
+  }
+}
+@media(max-width: 900px) {
+  .projectContainer {
+    padding: 14px 25px;
+  }
+  #busmsn {
+    background-image:url('/img/low/busmsn.jpg');;
+  }
+  #navigator {
+    background-image: url('/img/low/navigator.jpg');
+  }
+  #team_usa_sochi {
+    background-image: url('/img/low/team_usa_sochi.jpg');
+  }
+  #macrostrat_map {
+    background-image:url('/img/low/macrostrat.jpg');
+  }
+  #paleobiodb {
+    background-image:url('/img/low/paleobiodb.jpg');
+  }
+  #pioneer {
+    background-image:url('/img/low/pioneer.jpg');
+  }
+  #acmp {
+    background-image:url('/img/low/acmp.jpg');
+  }
+  #michigan_basin {
+    background-image:url('/img/low/michigan_basin.jpg');
+  }
+  #webmap_template_eia {
+    background-image:url('/img/low/webmap_template_eia.jpg');
+  }
+  #webmap_template_corridors {
+    background-image:url('/img/low/webmap_template_corridors.jpg');
+  }
+  #ecycle {
+    background-image:url('/img/low/ecycle.jpg');
+  }
+  #subway {
+    background-image:url('/img/low/subway.jpg');
+  }
+  #pronounce {
+    background-image:url('/img/low/pronounce.jpg');
+  }
+  #dlccc {
+    background-image:url('/img/low/dlccc.jpg');
+  }
+  #frac_sands {
+    background-image:url('/img/low/frac_sands.jpg');
+  }
+  #policy {
+    background-image:url('/img/low/policy.jpg');
+  }
+  #renewable {
+    background-image:url('/img/low/renewable.jpg');
+  }
+  #team_usa_london {
+    background-image:url('/img/low/team_usa_london.jpg');
+  }
+  #cashfree {
+    background-image:url('/img/low/cashfree.jpg');
+  }
+  #federal_spending {
+    background-image:url('/img/low/federal_spending.jpg');
+  }
+  #hoofermountaineering {
+    background-image:url('/img/low/hoofermountaineering.jpg');
+  }
+  #jmt {
+    background-image:url('/img/low/jmt.jpg');
+  }
+  #dl_bouldering {
+    background-image:url('/img/low/dl_bouldering.jpg');
+  }
+  #europe {
+    background-image:url('/img/low/europe.jpg');
+  }
+  #obesity {
+    background-image:url('/img/low/obesity.jpg');
+  }
+}
+@media(max-width: 675px) {
+  .toc > a > h2 {
+    font-size: 20px;
+  }
+  .category > h1 {
+    font-size: 26px;
+    padding: 30px 0;
+  }
+}
+@media(max-width: 505px) {
+  .category > h1 {
+    font-size: 22px;
+    padding: 30px 0;
+  }
+}
+@media(max-width: 475px) {
+  .toc > a > h2 {
+    font-size: 15px;
+  }
+}

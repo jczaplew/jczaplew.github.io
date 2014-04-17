@@ -5,373 +5,10 @@
     <title>John J Czaplewski</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    <link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css' />
-    <style>
-      html, body, .container-fluid, #titleRow {
-        height: 102%;
-        position: relative;
-      }
-    body {
-      padding-top:0;
-      padding-bottom: 40px;
-      background-image: url('../img/pw_maze_white.png');
-    }
-    .container-fluid {
-      padding-left:0;
-      padding-right: 0;
-    }
-    .row {
-      margin-right:0;
-      margin-left:0;
-    }
-    #titleHolder {
-      width:100%;
-      height:95%;
-      text-align: center;
-      background-color:#B7C11E;
-      display: table;
-    }
-    .titleContent {
-      color: #F5F5F5;
-      display: table-cell;
-      vertical-align: middle;
-      font-family: 'Exo', sans-serif;
-    }
-    .titleContent > h1 {
-      font-size:4em;
-      letter-spacing: 0.1em;
-    }
-    .socialMedia {
-      padding-right: 8px;
-      color: #F5F5F5;
-    }
-    .socialMedia:hover {
-      color: #23A38F;
-    }
-    #triangle {
-      position: absolute;
-      height: 30px;
-      width: 30px;
-      background-color: #B7C11E;
-      transform: rotate(45deg);
-      bottom: 0;
-      margin-bottom: 25px;
-      left: 49%;
-      z-index: 2;
-    }
-    .toc {
-      text-align: center;
-      padding:20px;
-      margin-top:-40px;
-      background-color: #ffffff;
-      color:#bbb;
-    }
-    .toc:hover {
-      color: #23A38F;
-      cursor: pointer;
-    }
-    .content > h1 {
-      padding: 30px 20px;
-    }
-    #projects {
-      background-color: #589494;
-      color: #F5F5F5;
-    }
-    .project {
-      background-color: rgba(88, 148, 148, 0.8);
-      color: #F5F5F5;
-      background-repeat: repeat-x;
-    }
-    .projectContainer {
-      background-color: rgba(88, 148, 148, 0.8);
-      padding: 60px;
-      margin-left: -15px;
-      margin-right: -15px;
-    }
-    .projectContainer > h2 > a {
-      color: #F5F5F5;
-    }
-    .projectContainer > h2 > a:hover {
-      color: #F5F5F5;
-      text-decoration: none;
-    }
-    #presentations {
-      background-color: #206978;
-      color: #F5F5F5;
-    }
-    .presentationContainer {
-      background-color: rgba(32, 105, 120, 0.8);
-      padding: 60px;
-      margin-left: -15px;
-      margin-right: -15px;
-    }
-    .presentationContainer > h3 > a {
-      color: #F5F5F5;
-    } 
-    .presentationContainer > h3 > a:hover {
-      color: #F5F5F5;
-      text-decoration: none;
-    } 
-    #resume {
-      background-color: #8EBBB4;
-    }
-    
-    @media(max-width: 3000px) {
-      .projectContainer {
-        padding: 60px;
-      }
-      #busmsn {
-        background-image:url('/img/high/busmsn.jpg');;
-      }
-      #navigator {
-        background-image: url('/img/high/navigator.jpg');
-      }
-      #team_usa_sochi {
-        background-image: url('/img/high/team_usa_sochi.jpg');
-      }
-      #macrostrat_map {
-        background-image:url('/img/high/macrostrat.jpg');
-      }
-      #paleobiodb {
-        background-image:url('/img/high/paleobiodb.jpg');
-      }
-      #pioneer {
-        background-image:url('/img/high/pioneer.jpg');
-      }
-      #acmp {
-        background-image:url('/img/high/acmp.jpg');
-      }
-      #michigan_basin {
-        background-image:url('/img/high/michigan_basin.jpg');
-      }
-      #webmap_template_eia {
-        background-image:url('/img/high/webmap_template_eia.jpg');
-      }
-      #webmap_template_corridors {
-        background-image:url('/img/high/webmap_template_corridors.jpg');
-      }
-      #ecycle {
-        background-image:url('/img/high/ecycle.jpg');
-      }
-      #subway {
-        background-image:url('/img/high/subway.jpg');
-      }
-      #pronounce {
-        background-image:url('/img/high/pronounce.jpg');
-      }
-      #dlccc {
-        background-image:url('/img/high/dlccc.jpg');
-      }
-      #frac_sands {
-        background-image:url('/img/high/frac_sands.jpg');
-      }
-      #policy {
-        background-image:url('/img/high/policy.jpg');
-      }
-      #renewable {
-        background-image:url('/img/high/renewable.jpg');
-      }
-      #team_usa_london {
-        background-image:url('/img/high/team_usa_london.jpg');
-      }
-      #cashfree {
-        background-image:url('/img/high/cashfree.jpg');
-      }
-      #federal_spending {
-        background-image:url('/img/high/federal_spending.jpg');
-      }
-      #hoofermountaineering {
-        background-image:url('/img/high/hoofermountaineering.jpg');
-      }
-      #jmt {
-        background-image:url('/img/high/jmt.jpg');
-      }
-      #dl_bouldering {
-        background-image:url('/img/high/dl_bouldering.jpg');
-      }
-      #europe {
-        background-image:url('/img/high/europe.jpg');
-      }
-      #obesity {
-        background-image:url('/img/high/obesity.jpg');
-      }
-    }
-    @media(max-width: 1450px) {
-      #busmsn {
-        background-image:url('/img/medium/busmsn.jpg');;
-      }
-      #navigator {
-        background-image: url('/img/medium/navigator.jpg');
-      }
-      #team_usa_sochi {
-        background-image: url('/img/medium/team_usa_sochi.jpg');
-      }
-      #macrostrat_map {
-        background-image:url('/img/medium/macrostrat.jpg');
-      }
-      #paleobiodb {
-        background-image:url('/img/medium/paleobiodb.jpg');
-      }
-      #pioneer {
-        background-image:url('/img/medium/pioneer.jpg');
-      }
-      #acmp {
-        background-image:url('/img/medium/acmp.jpg');
-      }
-      #michigan_basin {
-        background-image:url('/img/medium/michigan_basin.jpg');
-      }
-      #webmap_template_eia {
-        background-image:url('/img/medium/webmap_template_eia.jpg');
-      }
-      #webmap_template_corridors {
-        background-image:url('/img/medium/webmap_template_corridors.jpg');
-      }
-      #ecycle {
-        background-image:url('/img/medium/ecycle.jpg');
-      }
-      #subway {
-        background-image:url('/img/medium/subway.jpg');
-      }
-      #pronounce {
-        background-image:url('/img/medium/pronounce.jpg');
-      }
-      #dlccc {
-        background-image:url('/img/medium/dlccc.jpg');
-      }
-      #frac_sands {
-        background-image:url('/img/medium/frac_sands.jpg');
-      }
-      #policy {
-        background-image:url('/img/medium/policy.jpg');
-      }
-      #renewable {
-        background-image:url('/img/medium/renewable.jpg');
-      }
-      #team_usa_london {
-        background-image:url('/img/medium/team_usa_london.jpg');
-      }
-      #cashfree {
-        background-image:url('/img/medium/cashfree.jpg');
-      }
-      #federal_spending {
-        background-image:url('/img/medium/federal_spending.jpg');
-      }
-      #hoofermountaineering {
-        background-image:url('/img/medium/hoofermountaineering.jpg');
-      }
-      #jmt {
-        background-image:url('/img/medium/jmt.jpg');
-      }
-      #dl_bouldering {
-        background-image:url('/img/medium/dl_bouldering.jpg');
-      }
-      #europe {
-        background-image:url('/img/medium/europe.jpg');
-      }
-      #obesity {
-        background-image:url('/img/medium/obesity.jpg');
-      }
-    }
-    @media(max-width: 900px) {
-      .projectContainer {
-        padding: 14px 25px;
-      }
-      #busmsn {
-        background-image:url('/img/low/busmsn.jpg');;
-      }
-      #navigator {
-        background-image: url('/img/low/navigator.jpg');
-      }
-      #team_usa_sochi {
-        background-image: url('/img/low/team_usa_sochi.jpg');
-      }
-      #macrostrat_map {
-        background-image:url('/img/low/macrostrat.jpg');
-      }
-      #paleobiodb {
-        background-image:url('/img/low/paleobiodb.jpg');
-      }
-      #pioneer {
-        background-image:url('/img/low/pioneer.jpg');
-      }
-      #acmp {
-        background-image:url('/img/low/acmp.jpg');
-      }
-      #michigan_basin {
-        background-image:url('/img/low/michigan_basin.jpg');
-      }
-      #webmap_template_eia {
-        background-image:url('/img/low/webmap_template_eia.jpg');
-      }
-      #webmap_template_corridors {
-        background-image:url('/img/low/webmap_template_corridors.jpg');
-      }
-      #ecycle {
-        background-image:url('/img/low/ecycle.jpg');
-      }
-      #subway {
-        background-image:url('/img/low/subway.jpg');
-      }
-      #pronounce {
-        background-image:url('/img/low/pronounce.jpg');
-      }
-      #dlccc {
-        background-image:url('/img/low/dlccc.jpg');
-      }
-      #frac_sands {
-        background-image:url('/img/low/frac_sands.jpg');
-      }
-      #policy {
-        background-image:url('/img/low/policy.jpg');
-      }
-      #renewable {
-        background-image:url('/img/low/renewable.jpg');
-      }
-      #team_usa_london {
-        background-image:url('/img/low/team_usa_london.jpg');
-      }
-      #cashfree {
-        background-image:url('/img/low/cashfree.jpg');
-      }
-      #federal_spending {
-        background-image:url('/img/low/federal_spending.jpg');
-      }
-      #hoofermountaineering {
-        background-image:url('/img/low/hoofermountaineering.jpg');
-      }
-      #jmt {
-        background-image:url('/img/low/jmt.jpg');
-      }
-      #dl_bouldering {
-        background-image:url('/img/low/dl_bouldering.jpg');
-      }
-      #europe {
-        background-image:url('/img/low/europe.jpg');
-      }
-      #obesity {
-        background-image:url('/img/low/obesity.jpg');
-      }
-    }
-    @media(max-width: 675px) {
-      .toc > h2 {
-        font-size: 20px;
-      }
-    }
-    @media(max-width: 505px) {
-      .content > h1 {
-        font-size: 22px;
-        padding: 30px 0;
-      }
-    }
-    @media(max-width: 475px) {
-      .toc > h2 {
-        font-size: 15px;
-      }
-    }
-    </style>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"/>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Exo'/>
+    <link rel="stylesheet" href="/css/styles.css"/>
 
     <script type="text/javascript">
     // GA goes here
@@ -405,18 +42,22 @@
       
       <div class="row">
         <div class="col-xs-4 toc">
-          <h2>Projects</h2>
+          <a href="#projects">
+            <h2>Projects</h2>
+          </a>
         </div>
         <div class="col-xs-4 toc">
-          <h2>Presentations</h2>
+          <a href="#presentations">
+            <h2>Presentations</h2>
+          </a>
         </div>
         <div class="col-xs-4 toc">
-          <h2>R&#233;sum&#233;/CV</h2>
+          <a href="#resume"><h2>R&#233;sum&#233;/CV</h2></a>
         </div>
       </div>
 
       <div class="row" id="projects">
-        <div class="col-xs-12 content">
+        <div class="col-xs-12 category">
           <h1>Projects</h1>
         </div>
 
@@ -598,11 +239,11 @@
       </div> <!-- End projects -->
 
       <div class="row">
-        <div class="col-xs-12 content" id="presentations">
+        <div class="col-xs-12 category" id="presentations">
           <h1>Publications/Presentations</h1>
         </div>
 
-        <div class="col-xs-12 project">
+        <div class="col-xs-12">
           <div class="presentationContainer">
             <h3><a href="http://www.flmnh.ufl.edu/files/6813/9085/6747/NAPC_2014_Abstract_Book.pdf">Bringing Paleontology's 'Dark Data' To Light</a></h3>
             <h5>Shanan E. Peters (presenter), Christopher Ré, Miron Livny, Ce Czhang, Vidhya Govindaraju, Michael McClennen, John J. Czaplewski</h5>
@@ -610,7 +251,7 @@
           </div>
         </div>
 
-        <div class="col-xs-12 project">
+        <div class="col-xs-12">
           <div class="presentationContainer">
             <h3><a href="https://gsa.confex.com/gsa/2013AM/webprogram/Paper231359.html">Cyberinfrastructure for Plate Tectonic Reconstructions</a></h3>
             <h5>Mark Turner (presenter), Michael Gurnis, John Cannon, Xiaodong Qin, Shanan E Peters, Puneet Kishor, John Czaplewski</h5>
@@ -618,7 +259,7 @@
           </div>
         </div>
 
-        <div class="col-xs-12 project">
+        <div class="col-xs-12">
           <div class="presentationContainer">
             <h3><a href="http://www.johnjcz.com/presentations/foss4g2013/">Just-in-time Spatial - Acquisition, storage, & lightweight presentation of dynamic data</a></h3>
             <h5>John J Czaplewski, Maria Hart</h5>
@@ -626,7 +267,7 @@
           </div>
         </div>
 
-        <div class="col-xs-12 project">
+        <div class="col-xs-12">
           <div class="presentationContainer">
             <h3><a href="http://johnjcz.com/presentations/pronouncewi">Points & Polys in an Audio-Visual Environment - A Wisconsin Pronunciation Gazetteer</a></h3>
             <h5>John J Czaplewski</h5>
@@ -637,9 +278,127 @@
       </div>
 
       <div class="row">
-        <div class="col-xs-12 content" id="resume">
+        <div class="col-xs-12 category" id="resume">
           <h1>R&#233;sum&#233; / Curriculum Vitae
         </div>
+
+        <div class="col-xs-12 resume">
+          <div class="resumeContainer">
+            <a href="/documents/JohnJCzaplewski_Resume.pdf">
+              <h4>
+                <i class="fa fa-print"></i>  Printable r&#233;sum&#233; [PDF]
+              </h4>
+            </a>
+            <a href="/documents/JohnJCzaplewski_CV.pdf">
+              <h4>
+                <i class="fa fa-print"></i>   Printable CV [PDF]
+              </h4>
+            </a>
+
+            <h3>Education</h3>
+              <p><strong>University of Wisconsin-Madison</strong>
+              <ul>
+                <li><i>GIS Certificate Program, December 2012</i> - GPA 3.295/4.0</li>
+                <li><i>Bachelor of Arts in Political Science, May 2011</i> - GPA 3.3/4.0 (Major GPA 3.53/4.0)</li>
+              </ul></p>
+
+          <h3>Relevant Skills</h3>
+            <ul>
+              <li><strong>Front  | </strong> HTML, CSS, Javascript, jQuery, Leaflet, D3, Boostrap, Wordpress</li>
+
+              <li><strong>Back  | </strong> Node.js, Grunt, Amazon AWS, Heroku, Python, Linux command line</li>
+
+              <li><strong>Geo  | </strong> PostGIS, TopoJSON, GeoJSON, CartoDB, QGIS, ArcGIS, GDAL/OGR</li>
+
+              <li><strong>Database  | </strong> PostgreSQL, MySQL, MariaDB</li>
+
+              <li><strong>Design  | </strong> Responsive web design, Adobe Illustrator, Photoshop, Fireworks, and InDesign</li>
+            </ul>
+
+          <h3>Work Experience</h3>
+            <p>
+              <strong>UW-Madison Department of Geoscience</strong> - <i>Programmer Analyst (May 2013 to Present)</i>
+              <ul>
+                <li>Design, build, and implement full-stack web applications, including database design, API authoring, and front-end development.</li>
+                <li>Create open source tools and utilities to enable scientific research.</li>
+              </ul>
+
+
+              <strong>National Center for Freight Infrastructure Research & Education (CFIRE)</strong> - <i>Spatial IT Research Intern (October 2012 to April 2013)</i>
+              <ul>
+                <li>Design, code, and implement interactive maps and data visualizations with Leaflet and D3 to support research</li>
+                <li>Create automatic data collection scripts with Python</li>
+                <li>Stay up-to-date on cutting edge web technologies</li>
+                <li>Design MySQL databases and access methods</li>
+                <li>General design and cartographic work</li>
+              </ul>
+
+              <strong>Wisconsin State Cartographer’s Office</strong> - <i>GIS/Web Support Technician (November 2011 to January 2013)</i>
+              <ul>
+                <li>Maintain online PostGIS databases and custom web mapping applications</li>
+                <li>Thoroughly document procedures and metadata using internal wiki</li>
+                <li>Troubleshoot database and application issues</li>
+                <li>Design and build Wisconsin Pronunciation Gazetteer - involved researching data for an original data layer, prototyping various web technologies, and designing a user interface.</li>
+                <li>Support various long term projects and publications</li>
+                <li>Assist in writing technical papers</li>
+              </ul>
+            </p>
+
+          <h3>Leadership</h3>
+            <p>
+            <strong>Hoofer Council Renovations Chair (2010-2011)</strong>
+            <ul>
+              <li>Collaborate with architects and Union directors on a $52 million State of Wisconsin building project</li>
+              <li>Represent the interests of 2,100 people and a $1.2 million dollar budget during renovation of Memorial Union and the opening of Union South</li>
+              <li>Chair a student committee and use creative problem solving and teamwork to reconcile differences between members and clubs</li>
+            </ul>
+
+            <strong>Union South Climbing Wall Committee – Chair (2010-2011)</strong>
+            <ul>
+              <li>Draft an operating procedure, marketing plan, and programming for the centerpiece of the new Union</li>
+              <li>Devise an agenda and manage weekly meetings for a committee comprised of both Wisconsin Union directors and student leaders</li>
+            </ul>  
+
+            <strong>Hoofer Mountaineering Club – President (2009-2010)</strong>
+            <ul>
+              <li>Chair meetings of a 160-member club and act as a liaison to other clubs and the University</li>
+              <li>Collaborate with others to develop and run events for the club</li>
+              <li>Meet and critically discuss with contractors and Union representatives</li>
+            </ul></p>
+
+          <h3>Volunteering</h3>
+            <p>
+              <strong>Hoofer Mountaineering Club Technology Chair (2012 - 2013)</strong>
+              <ul>
+                <li>Overhaul club website</li>
+                <li>Do a fresh WordPress install on their server</li>
+                <li>Migrate content from Joomla to WordPress</li>
+                <li>Redesign website and update content</li>
+                <li>Added various modules for long-term support, including a custom wiki for documenting the website redesign and migration</li>
+                <li>Reorganize website structure into new menus for more efficient and intuitive navigation</li>
+                <li>Train club members to use the new WordPress CMS to update content</li>
+              </ul>
+
+              <strong>Devil's Lake Century Climbing Challenge (2012)</strong>
+              <ul>
+                <li>The DLCCC is a fundraiser to benefit the Friends of Devil’s Lake State Park, a nonprofit that supports the maintenance and improvement of Devil’s Lake. I designed a WordPress blog to keep information about the Challenge organized, as well as <a href="http://maps.johnjcz.com/docs/dlccc_poster.pdf">a poster [PDF]</a> to be posted at local businesses to advertise the event.</li>
+              </ul>
+
+              <strong>UW Student Legal Services</strong>
+              <ul>
+                <li>Assist  members of the University and greater Madison community with legal issues by researching Wisconsin and federal statutes, and summarizing the findings.</li>
+              </ul></p>
+
+          <h3>Honors</h3>
+          <p><ul>
+              <li>NACIS Student Travel Grant Recipient, September 2012</li>
+              <li>Wisconsin Union Leadership Award, April 2011</li>
+              <li>Deans List, Fall 2007</li>
+            </ul>
+          </p>
+          </div>
+        </div>
+          
       </div>
 
     </div>
