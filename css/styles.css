@@ -46,6 +46,7 @@ body {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   bottom: 0;
   margin-bottom: 27px;
   left: 49%;
@@ -394,7 +395,25 @@ body {
   }
 }
 @media(max-width: 475px) {
+  .toc {
+    padding: 20px 8px;
+  }
   .toc > a > h2 {
     font-size: 15px;
+  }
+  .projectContainer > h2 {
+    font-size: 21px;
+  }
+  .projectContainer {
+    padding: 9px 25px;
+  }
+  .titleContent > h1 {
+    font-size: 3em;
+  }
+  .presentationContainer {
+    padding: 30px;
+  }
+  .resumeContainer {
+    padding: 20px;
   }
 }
