@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CFIRE Data Scraping</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+    @import url(stack.css);
+
+    .big {
+      font-size: 128px;
+    }
+
+    .caption {
+      font-size: 96px;
+      text-align: center;
+      text-shadow: 0px 2px 6px rgba(0,0,0,.5);
+    }
+
+    .inverse {
+      color:#000;
+    }
+
+    img {
+      height: 100%;
+      display: block;
+      margin: auto;
+    }
+    img.tools {
+      height:auto;
+      display: inline;
+      margin: auto;
+    }
+
+    </style>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  </head>
+
+<body class="overview">
+
+  <section>
+    <p class="caption">Programmatic Data Scraping</p>
+    <p style="text-align:center">Strategies for transportation researchers</p>
+  </section>
+
+  <section>
+    <h2>What I'm NOT talking about</h2>
+    <uL>
+      <li>Illegal "hacking"</li>
+        <!--Define hacking in today's context -->
+      <li>Pulling data out of thin air</li>
+      <li>Magic</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What I AM talking about</h2>
+    <ul>
+      <li>Data transformation and extraction from known sources</li>
+      <li>Creative problem solving</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Skills to have (if you don't already)</h2>
+    <ul>
+      <li>Basic logic</li>
+      <li>Some object-oriented programming</li>
+      <li>Curiosity. Lots of it.</li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="caption">The obvious question:</p>
+  </section>
+
+  <section>
+    <h3>Why can't I just download a spreadsheet of the data?</h3>
+  </section>
+
+  <section>
+    <h1 class="caption">Where to start</h1>
+  </section>
+
+  <section>
+    <h3 class="caption">Picking the right source</h3>
+  </section>
+
+  <section style="background:url(img/cats.png);">
+    <h1 class="caption inverse">NO</h1>
+  </section>
+
+  <section style="background:url(img/json.png);">
+    <h1 class="caption inverse">Yes</h1>
+  </section>
+
+  <section style="background:url(img/xml.png);">
+    <h1 class="caption inverse">Yes</h1>
+  </section>
+
+  <section style="background:url(img/html_table.png);">
+    <h1 class="caption inverse">Yes</h1>
+  </section>
+
+  <section style="background:url(img/eia_map.png);">
+    <h1 class="caption inverse">Yes</h1>
+  </section>
+
+  <section style="background:url(img/export_data.png);">
+    <h1 class="caption inverse">Yes</h1>
+  </section>
+
+  <section>
+    <h3>Picking your tools</h3>
+    <img class="tools" src="img/python.png" style="width:200px" />
+    <img class="tools" src="img/beautifulsoup.jpg" style="width:175px"/>
+    <img class="tools" src="img/mysql.png" style="width:200px"/>
+    <img class="tools" src="img/csv.png" style="width:175px"/>
+    <img class="tools" src="img/leaflet.png" style="width:200px"/>
+    <p>(d3.js)</p>
+  </section>
+<!--
+  <section>
+    <h3>Why all open-source?</h3>
+  </section>
+
+  <section>
+    <h1 class="caption">The Workflow</h1>
+  </section>
+-->
+
+  <section>
+    <h1 class="caption">Case Studies</h1>
+  </section>
+
+  <section>
+    <h1 class="caption">#1 An Easy One</h1>
+  </section>
+
+  <section>
+    <img src="img/census.png"/>
+  </section>  
+
+  <section>
+    <img src="img/excel_from_web.png"/>
+  </section>  
+
+  <section>
+    <img src="img/excel_query.png"/>
+  </section>  
+
+  <section>
+    <img src="img/excel_imported.png"/>
+  </section>  
+
+  <section>
+    <h1 class="caption">#2 Slightly More Complicated</h1>
+  </section>
+
+  <section>
+    <img src="img/ethanol.png" />
+  </section>  
+
+  <section>
+    <img src="img/ethanol2.png" />
+  </section>  
+
+  <section>
+    <img src="img/chrome_console.png" />
+  </section>  
+
+  <section>
+    <img src="img/chrome_console2.png" />
+  </section>
+
+  <section>
+    <img src="img/chrome_console3.png" />
+  </section>  
+
+  <section>
+    <img src="img/python_script.png" />
+  </section>
+
+  <section>
+    <img src="img/run_script.png" />
+  </section>
+
+  <section>
+    <img src="img/csv_data.png" />
+  </section>  
+
+  <section>
+    <h1 class="caption">#3 Fairly Complicated</h1>
+  </section>
+
+  <section>
+    <img src="img/cb_search.png" />
+  </section>
+
+  <section>
+    <img src="img/cb_api_search.png" />
+  </section>
+
+  <section>
+    <img src="img/scrape_code.png" />
+  </section>
+
+  <section>
+    <img src="img/stored_data.png" />
+  </section>
+
+  <section>
+    <img src="img/driver_map.png" />
+  </section>
+
+  <section>
+    <p>Find the slides at http://midamericafreight.org/presentations/scraping</p>
+    <h1>Questions?</h1>
+  </section>
+
+<script src="d3.v2.js?2.7.3"></script>
+<script src="stack.v0.js"></script>
+</body>
+</html>

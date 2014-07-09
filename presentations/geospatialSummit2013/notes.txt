@@ -1,0 +1,157 @@
+Pronounce Wisconsin - Wisconsin Geospatial Summit 2013
+
+Start
+	- Welcome! Today I'm going to be giving an overview of the Pronounce Wisconsin project, which as I'm sure some of you may know, is a web map produced by the Wisconsin State Cartographer's Office and Jackie Johnson of Misspronouncer.com. We're going to start with the origins of the project, then move into the technology used and an overview of the final product, and end with lessons learned. 
+
+	- First off, I'm John Czaplewski, and Pronounce Wisconsin was my internship project for the GIS Certificate Program here at UW-Madison.
+
+  * Change *
+
+Midscale Project 
+	- In 2012 I was employed at the State Cartographer's Office, and under the direction of Howard Veregin, developed this application as part of the SCO Midscale project, which is an ongoing project by the office to "develop a statewide, mid-scale, internally consistent, richly-attributed cartographic database for 1 to 500,000 scale mapping, including rendering maps, web services, and data layers". 
+	- One layer and part of the project was developing a list of unincorporated places in the state, which was a challenge because prior to this effort, no authoritative list or map had previously existed.
+
+	- Various levels of government maintain their own lists or maps of unincorporated places, including the USGS Geographic Names Information System (more commonly known as GNIS), the Wisconsin Department of Health, the Wisconsin Department of Transportation, and an assorted mix of counties throughout the state
+
+  * Change *
+
+Compiling Unincs
+	- This project started with the assembling of this data layer, before the idea for an interactive pronouncing map was ever conceived.
+	- One of my first tasks at the SCO was to assist in the development of the unincorporated places layer, which involved aggregating all the previously mentioned sources
+	- Because it contained a large number of points (by which I mean rougly 2,000) and came as a geodatabase, we started with GNIS's data.
+
+  * Change * 
+
+	- From there we manually went through the DOT county road maps and recorded which points matched the GNIS list.
+
+  * Change * 
+
+	- After WisDOT maps, we manually cross-referenced the Department of Health list with the original geodatabase
+	- When done with that, we found all the county-produced maps that contained unincorporated places, and cross-referenced that with the geodatabase
+	- At this point, Howard went through the database and determined which places we would include in our final data layer by giving greater weight to more local sources ( for example, if it was only in the GNIS database, but not in any other source it was excluded, whereas if a place only appeared on a county-produced map but no where else, it was included) 
+
+  * Change * 
+
+Misspronouncer/Next steps
+	- At this point, we had an original, fairly difinitive list of unincorporated places in the state.
+	- Around the same time Howard came across Misspronouncer.com, a website that contains pronunciations for everything Wisconsin, including unincorporated places, and got the idea to create an interactive pronunciation gazetteer of Wisconsin's unincorporated places
+	- Going into this project, misspronouncer.com only contained pronunciations for roughly 300 unincorporated places, and our list contained 1051
+	- Howard contacted Jackie Johnson, and she enthusiastically embraced the idea of an interactive pronunciation gazetteer, and promised to help us out by filling in the holes in her dataset, which involved calling someone near each place to verify the local pronunciation
+
+  * Change * 
+
+Internship
+	- At this point, I volunteered to help produce an interactive map, as I had been teaching myself HTML and CSS, and wanted a long term web development project, and thought this could turn into a neat internship project
+	- When I started working on this, I had never made a website, and had never written a line of Javascript, and...
+	- Because of this, Pronounce Wisconsin took an abnormally long time to develop, as I had to learn every tiny piece of functionality from scratch. However, I came out of it with some extremely valuable skills, and I sincerely appreciate the opportunity and time the SCO gave me to develop these skills
+
+  * Change * 
+
+Project Requirements
+	- When the project began, the main goal was just to have unincorporated places on an interactive map, and to have them pronounce when moused over
+	- The project requirements evolved a bit over time to include all of the above bullet points, such as adding a search feature, and pronunciations for counties, cities, and villages, as Jackie already had the pronunciations for these features
+	- The target platforms were everything from IE8 to mobile devices, which, as I'll explain later, were achieved to varying extents
+
+  * Change * 
+
+  * Change * 
+
+The Tech
+	- Perhaps the largest factor that influenced our choices of technology were the problems encountered early in the development process and our own ignorance 
+	- For example, when I first started, Leaflet became very laggy when the polygons for all cities and villages in Wisconsin were added to the map, which led us to use PostGIS, and request only visible features
+	- However, as I'll explain in more depth later, Leaflet matured to be able to handle those features without any problems. 
+	- Additionally, because this was my first web development project, there were myriad tools and utilities I was ignorant of that would have expedited the process and improved the application dramatically
+
+  * Change * 
+
+	- Before diving in entirely, I built simplified versions of the application with a few web mapping frameworks in order to decide which would be the best for this project
+	- At the time, Google Maps and Open Layers were still extremely popular, but Leaflet had tons of momentum, an elegant API, and excellent documentation
+	- It was apparent that it would become a popular framework, and thus it would be worth investing time learning it
+
+	- I also experimented with loading features in a few ways - PostGIS, CartoDB (more or less a consumer version of PostGIS), and as flat GeoJSON files
+
+  * Change * 
+
+	- In the end, we chose Leaflet and PostGIS - Leaflet because of the previously mentioned reasons, and PostGIS because of an existing installation on our servers, interoffice knowledge, and its ability to handle spatial queries
+
+  * Change * 
+
+	- And then there is the issue of audio on the web...which presents huge challenges both technically and from a user experience perspective
+	- Technically speaking, there is no single audio format that all browsers and devices can handle natively without a plugin. For this project, relying on Flash or other plugins was not an option because we wanted it to work on mobile devices, especially those running iOS
+
+	- From a user experience perspective, the use of audio within web pages is generally seen as inappropriate, and tends to remind people (at least me) of the Geocities days of the web and annoying advertisments 
+
+	- In the end, we went with the HTML5 <audio> tag with two audio formats - mp3 and ogg, which from our testing seems to work on nearly all browsers, except IE8
+	- To support IE8, we used an <embed> tag and mp3 files
+
+  * Change * 
+
+Collaboration
+	- Pronounce Wisconsin was a collaborative project between Jackie Johnson of misspronouncer.com and the SCO, but of nearly equal importance was the influence of other people who happened to cross our paths during the development process
+	- Because Leaflet was fairly new at the time, there was very little documentation online, so commiserating with other people working with Leaflet (whether online or in-person) was essential and lead to many breakthroughs
+	- Perhaps one of the larger lessons learned was what can be accomplished simply by coding in the same room as someone who could potentially solve any small problems you encounter
+	- Likewise, for me it was very rewarding and productive to stop working on my project for 15 minutes and attempt to solve someone else's problem, which often gave me ideas as to how I could better organize or execute my code
+
+  * Change * 
+
+Final Product
+	- If you want to follow along or check it out later, this is the URL, but I'll also put it on the last slide
+
+  * Change * 
+
+	- When the map is opened, the user is greated with an overview of Wisconsin, with counties and unincs present. 
+
+  * Change *
+
+	- Here the user can mouse over the counties to identify them and hear the pronunciation.
+
+  * Change * 
+
+	- After a zooming in, the county boundaries are reduced to dotted lines, and cities and villages become visable. From this zoom level and down, the user can mouse over cities, villages, and unincs to hear pronunciations
+
+  * Change * 
+
+	- After zooming in even further, a list will appear on the left size with a list of features present in the current map view. You can mouse over an item in the list to identify where that feature is on the map, or if you mouse over the feature it will highlight in the list.
+	- We felt this was an important feature because it helps users discover adjacent interesting pronunciations they may have otherwise missed
+
+  * Change * 
+
+	- The map also has an autocomplete search feature, which helps users find places they may not know the exact spelling of (like Ashwabenon). Like the side bar, it is organized by the feature type, and also includes the county for the unincorporated places because there are some common names among those features.
+
+  * Change * 
+
+Pros
+	- As of now, Pronounce Wisconsin is in beta, and for the most part, we accomplished the objectives we sought at the beginning of the project
+	- Another nice feature is that it is a demonstration of a lightweight, but very extendable open source web mapping framework - PostGIS can handle far more data and complex querries, and Leaflet has matured enough to be able to keep up with that
+	- Although this is more of a personal Pro, Pronounce Wisconsin was an incredible first web mapping project for me, and I still reference it on a regular basis
+	- And just to throw in another small success, according to Google Analytics, the average time spent on the page is over 3 minutes, which is double the average time spent on all SCO online applications combined.
+
+  * Change * 
+
+Cons
+	- For most of the process, we struggled with speed, and especially what exactly was causing degredations in performance. 
+	- Part of the problem is the use of customly styled Google Maps tiles being used in Leaflet, and upon inspection the tile counting token from Google causes a slight delay in every tile request
+	- I also didn't have the opportunity to test the application on every device/OS/browser combination, and have heard of some strange compatibility issues that I have not been able to diagnois
+	- The other problem that remains a bit of a mystery is unpredictable unresponsiveness by the server the PostGIS database lives on. At seemingly random intervals, a request to the database will take around 5-10 seconds, whereas the regular response time is in the tens to low hundreds of milliseconds
+	- Also, because this was my first try writing a web mapping application, the code base is riddled with stylistic and inefficiency mistakes, mostly because I didn't know any better. Nearly every day I come across a trick or tip that I know I didn't use in Pronounce Wisconsin.
+
+  * Change * 
+
+What I'd Do Differently
+	- Oddly enough, if I was to do it all over, I wouldn't use PostGIS, which is slightly unfortunate because I learned a ton about PostGIS during the course of this project and learned to love it
+
+	- However, it's just not necessary anymore. There is a Leaflet plugin for point-in-polygon operations, and the performance has matured to where loading every feature at once is okay
+
+	- As I mentioned before, a major performance hinderance was the use of Google tiles, so replacing those with custom tiles would be ideal. The main reason Google tiles were used in the first place was because we didn't want place names on the map, as it would interferre with the experience we were trying to create.
+	- And to address another drawback of the current version, I would rewrite the interface in Bootstrap because of it's predictability across a range of devices
+
+	- Perhaps a slightly more controversial point, if I were to rewrite Pronounce Wisconsin I would not attempt to support anything less than IE9 because of the lack of support for HTML5 and other deficiencies that require seperate code bases and countless hours of debugging. I think it's also important to note that while IE is the most popular browser and accounts for 40% of the traffic to the SCO applications server overall, the traffic to Pronounce Wisconsin is dominated by Chrome and Firefox, with IE coming in just before Safari, and thus ignoring old versions of IE would probably not have a very significant impact on traffic to the application.
+
+ * Change * 
+
+That's all, folks
+	- That's all I have for today, you can find the slides at the first URL, and Pronounce Wisconsin at the other.
+	- Thank you for attending, and hopefully we have some time for questions, if anyone has any
+
+
+

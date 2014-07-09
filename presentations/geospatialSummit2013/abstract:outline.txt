@@ -1,0 +1,44 @@
+- Creating Pronounce Wisconsin: An Open-source Pronunciation Gazetteer
+
+- Integrating Audio into an Open-source Web-mapping Framework
+- Pronounce Wisconsin:  Using Leaflet for a Place-based Audio Gazetteer
+- Points and Polys in an Audio-visual Environment - A Wisconsin Pronunciation Gazetteer
+
+In 2012, the Wisconsin State Cartographer’s Office set out to build Pronounce Wisconsin, an interactive pronunciation gazetteer of Wisconsin placenames in collaboration with Jackie Johnson of Misspronouncer.com. Built on a highly flexible open source stack (PostGIS, GeoJSON, and Leaflet), the application allows users to explore pronunciations of all counties, cities, villages, and unincorporated places in the state. While interactive maps and audio elements have coexisted on the internet almost since its inception, the combination of both in gazetteer form has not been extensively explored, and perhaps for good reason. 
+
+This presentation will explore the objectives of the Pronounce Wisconsin project, technology considerations and choices, and lessons learned. 
+
+
+web design convention tells us that audio is generally faux pas, and the technology to support this combination has only existed for about a decade. 
+
+
++Intro
+	- History of project
+		-- Midscale project
+		-- Compiling Unincs
+		-- Misspronouncer
+		-- Student learning experience
+	- Project requirements / objectives
+
++Technology
+	- Trials 
+	- How initial problems and existing knowledge influenced choices
+		-- PostGIS!
+	- Optimizing audio for cross browser/device compatibility
+
++UX
+	- Little existing literature specific to web maps (nudge nudge)
+	- Limiting choices
+	- Challenge of audio (conventional wisdom says don't use it)
+
++Collaboration (a different type of open source)
+	- Jackie, Michael
+	- 
+
++Final product
+	- Pros: functional beta version, all initial objectives achieved, extendible 
+	- Cons: PERFORMANCE (both speed and device/browser support)
+
++What I'd do differently if I built it today
+
+

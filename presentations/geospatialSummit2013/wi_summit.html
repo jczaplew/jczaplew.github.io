@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Points & Polys in an Audio-Visual Environment</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+    @import url(stack.css);
+
+    .big {
+      font-size: 128px;
+    }
+
+    .caption {
+      font-size: 96px;
+      text-align: center;
+      text-shadow: 0px 2px 6px rgba(0,0,0,.5);
+    }
+
+    .inverse {
+      color:#000;
+    }
+    h2.list {
+      margin-top:-30px;
+    }
+    img {
+      height: 100%;
+      display: block;
+      margin: auto;
+    }
+    img.tools {
+      height:auto;
+      display: inline;
+      margin: auto;
+    }
+    strong {
+      text-decoration: line-through;
+    }
+
+    </style>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  </head>
+
+<body class="overview">
+  <!--Slides to add
+    - Pictures of sources that went into uninc layer
+    - Picture of misspronouncer.com 
+  -->
+  <section>
+    <h2>Points & Polys in an Audio-Visual Environment - A Wisconsin Pronunciation Gazetteer</h2>
+    <p>John J Czaplewski | UW-Madison | @JJCzaplewski</p>
+  </section>
+
+  <section>
+    <h2>SCO Midscale Project</h2>
+  </section>
+
+  <section>
+    <h2>Compiling Unincorporated Places (unincs)</h2>
+  </section>
+
+  <section>
+    <img src="img/county_map.png"/>
+  </section>  
+
+  <section>
+    <img src="img/dhs_list.png"/>
+  </section>  
+
+  <section>
+    <h2>Misspronouncer</h2>
+    <img src="img/misspronouncer.png" />
+  </section>
+
+  <section>
+    <h2>Student Internship</h2>
+  </section>
+
+  <section>
+    <h2 class="list">Project Requirements/Objectives</h2>
+    <ul>
+      <li>Display unincs on an interactive map</li>
+      <li>Pronounce placename on mouseover</li>
+      <li>Flexible Javascript framework</li>
+      <li>Searchable</li>
+      <li>IE8 to iOS</li>
+      <li>Easily maintainable</li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="caption">Technology</p>
+  </section>
+
+  <section>
+    <h2>Impact of initial problems and existing knowledge on choices</h2>
+  </section>
+
+  <section>
+    <h2 class="list">Prototyping</h2>
+    <ul>
+      <li>Leaflet</li>
+      <li>Google Maps API</li>
+      <li>Open Layers</li>
+      <li>PostGIS</li>
+      <li>CartoDB</li>
+      <li>GeoJSON</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="list">Prototyping</h2>
+    <ul>
+      <li>Leaflet</li>
+      <li><strong>Google Maps API</strong></li>
+      <li><strong>Open Layers</strong></li>
+      <li>PostGIS</li>
+      <li><strong>CartoDB</strong></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Audio...</h2><!--from both a tech and UX perspective -->
+  </section>
+
+  <section>
+    <p class="caption">Collaboration</p><!--Jackie, Michael, cart lab, Howard, Max -->
+  </section>
+
+  <section>
+    <h2 class="caption">Final Product</h2>
+    <p>http://maps.sco.wisc.edu/pronouncewi</p>
+  </section>
+
+  <section>
+    <img src="img/pw_overview.png"/>
+  </section>  
+
+  <section>
+    <img src="img/county.png"/>
+  </section>  
+
+  <section>
+    <img src="img/city.png"/>
+  </section>  
+
+  <section>
+    <img src="img/uninc.png"/>
+  </section>  
+
+  <section>
+    <img src="img/search.png"/>
+  </section>  
+
+  <section>
+    <h2 class="list">Pros:</h2>
+    <ul>
+      <li>Functional beta version</li>
+      <li>All initial objectives achieved + some</li>
+      <li>Highly extendable</li>
+      <li>A lot learned</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="list">Cons</h2>
+    <ul>
+      <li>Speed</li>
+      <li>Compatibility</li>
+      <li>Unpredictable</li>
+      <li>Rookie mistakes</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="list">What I'd Do Differently</h2>
+    <ul>
+      <li>CSV and topojson, no database</li>
+      <li>Custom tiles</li>
+      <li>Bootstrap</li>
+      <li>Ignore < IE9</li>
+    </ul>
+  </section>
+
+  <section>
+    <p>Find the slides @ http://johnjcz.com/presentations/pronouncewi</p>
+    <p>Find the map @ http://maps.sco.wisc.edu/pronouncewi</p>
+    <h1>Questions?</h1>
+  </section>
+
+<script src="d3.v2.js?2.7.3"></script>
+<script src="stack.v0.js"></script>
+</body>
+</html>
