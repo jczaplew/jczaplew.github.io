@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CFIRE Data Scraping</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+    @import url(stack.css);
+
+    .big {
+      font-size: 128px;
+    }
+
+    .caption {
+      font-size: 96px;
+      text-align: center;
+      text-shadow: 0px 2px 6px rgba(0,0,0,.5);
+    }
+
+    .inverse {
+      color:#000;
+    }
+
+    img {
+      height: 100%;
+      display: block;
+      margin: auto;
+    }
+    img.tools {
+      height:auto;
+      display: inline;
+      margin: auto;
+    }
+
+    </style>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  </head>
+
+<body class="overview">
+
+  <section>
+    <p class="caption">Just-in-time spatial</p>
+    <p style="text-align:center">Acquisition, storage, & lightweight presentation of dynamic data</p>
+    <p class="grey small">John J Czaplewski | UW - Madison | @JJCzaplewski <br>Maria Hart | CFIRE | @freightplanner</p>
+  </section>
+
+  <section>
+    <h2>Outline</h2>
+    <ul>
+      <li>Scraping</li>
+      <li>Presentation</li>
+      <li>Separating geometry and attributes</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Part I: Scraping</h2>
+  </section>
+
+  <section>
+    <h2>What it is:</h2>
+    <ul>
+      <li>Programmatic data acquisition
+      <li>Data transformation and extraction from known sources</li>
+      <li>Accessing previously inaccessible data</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Who (might) care:</h2>
+    <ul>
+      <li>Researchers</li>
+      <li>Journalists</li>
+      <li>Hobbyists</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Why can't I just download a spreadsheet of the data?</h2>
+    <ul>
+      <li>Data provider doesn't realize the value</li>
+      <li>Publishing is an afterthought</li<>
+      <li>Competitive advantage</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 class="caption">Picking the right source</h3>
+    <ul>
+      <li>Keep it targeted</li>
+      <li>What's it worth?</li>
+    </ul>
+  </section>
+
+  <section style="background:url(img/cats.png);">
+    <h1 class="caption inverse">NO</h1>
+  </section>
+
+  <section style="background:url(img/json.png);">
+    <h1 class="caption inverse">Yes</h1>
+  </section>
+
+  <section style="background:url(img/xml.png);">
+    <h1 class="caption inverse">Yes</h1>
+  </section>
+
+  <section style="background:url(img/html_table.png);">
+    <h1 class="caption inverse">Yes</h1>
+  </section>
+
+  <section style="background:url(img/eia_map.png);">
+    <h1 class="caption inverse">Yes</h1>
+  </section>
+
+  <section style="background:url(img/export_data.png);">
+    <h1 class="caption inverse">Yes</h1>
+  </section>
+
+  <section>
+    <h2>topojson</h2>
+    <p>An extension of GeoJSON that encodes topology</p>
+  </section>
+
+  <section>
+    <h2>topojson + CSV > GeoJSON</h2>
+  </section>
+
+  <section>
+    <p>Natural Earth 10m Sovereign Entities</p>
+    <ul>
+      <li>Shapefile: ~ 11mb</li>
+      <li>GeoJSON: 24.7mb</li>
+      <li>Topojson + CSV: 2mb</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Know your limits (or proxies)</h2>
+    <ul>
+      <li>Test locally</li>
+      <li>Process locally</li>
+      <li>Download slowly</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Why all open-source?</h2>
+    <ul>
+      <li>Tool options</li>
+      <li>Control</li>
+      <li>Share / Repeat</li>
+    </ul>
+  </section>
+
+  <section>
+   <h2>Example: City of Madison Data</h2>
+  </section>
+
+  <section>
+    <h1 class="caption">Truck Driver Shortage</h1>
+    <p style="font-size:36px;text-align:center;">http://midamericafreight.org/rfs_maps/drivershortage
+  </section>
+
+  <section>
+    <img src="img/cb_search.png" />
+  </section>
+
+  <section>
+    <img src="img/cb_api_search.png" />
+  </section>
+
+  <section>
+    <img src="img/driver_map.png" />
+  </section>
+
+  <section>
+    <h1 class="caption">Energy Information Administration (EIA)</h1>
+    <p style="font-size:36px;text-align:center;">http://midamericafreight.org/rfs_maps/template/eia_example</p>
+  </section>
+
+  <section>
+    <img src="img/eia1.png" />
+  </section>
+
+  <section>
+    <img src="img/eia2.png" />
+  </section>
+
+  <section>
+    <img src="img/eia3.png" />
+  </section>
+
+  <section>
+    <img src="img/eia4.png" />
+  </section>
+
+  <section>
+    <h2>Thank you to CFIRE/MAFC!</h2>
+  </section>
+
+  <section>
+    <p>Find the slides at http://johnjcz.com/presentations/foss4g2013<br>
+      the code at https://github.com/jczaplew/foss4gna_examples <br>
+      and me @JJCzaplewski
+    </p>
+
+    <h1>Questions?</h1>
+  </section>
+
+<script src="d3.v2.js?2.7.3"></script>
+<script src="stack.v0.js"></script>
+</body>
+</html>

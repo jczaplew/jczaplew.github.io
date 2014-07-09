@@ -1,0 +1,161 @@
+Just-in-time Spatial - FOSS4G-NA 2013
+
+Start
+	- Welcome! First off, I'm John Czaplewski, and I work for the University of Wisconsin - Madison's Geoscience department as a programmer doing web application development, but today I'm going to be talking about work I did while at the National Center for Freight Infrastructure Research and Education, or CFIRE. 
+
+  * Change *
+
+  	- Today we'll be talking about data scraping and presentation in the context of web mapping, and how it can be of value to various professionals who deal with geographic phenomena. I'm going to briefly touch on presentation methods, but dive into the delivery of the presentation materials more in depth. 
+
+  * Change *
+
+Part I: Scraping
+
+	- There are a lot of ideas about what scraping encompasses, but for the purpose of this presentation I'm referring to the programmatic collection of known data, as well as the filtering out of the junk.
+
+	- As some of you may have heard, the White House recently released an Executive Order requiring that government data be made accessible to the public when possible. A key phrase in that order was that the data be machine readable, which, although that could in theory mean a PDF of a scanned hand written document, it hopefully means that we will be able to programmatically access and manipulate the data. However, I wouldn't expect all government agencies to suddenly launch REST APIs for their data tomorrow, and because of that, I still think there will be a need for people who have the abilities to write programs to extract data from whatever format it may be in.
+
+	- I think it would also be an appropriate time to clarify that scraping, in my mind, can have a couple different connotations. First of all, it can simply be an ETL script to take data from one format, and transform it into another (for example, an XML with lat/longs being transformed into a shapefile). I think the really interesting version is when you are able to systematically acquire dynamic data, and use it in ways not originally intended. Seemingly everyone these days is doing this with the Twitter API to do everything from attempting to predict voting patterns, to mapping responses to major events.
+
+	- Although you can scrape pretty much anything for any purpose, I'm mostly interested in scraping geometry-less data, and visualizing it geographically, which usually involves matching attributes and geometry on-the-fly. It's quite easy to find lat/longs for point data, or data that contains an attribute that can be used to visualize it geographically, like a FIPS or ZIP code, or a county or state name. As I will discuss later, this splitting of the attributes from the geometry is often times a necessity when visualizing this type of data, especially when it is dynamic, but it can also be an efficient way to visualize any type of geographic data in a web browser. 
+
+* Change *
+	
+	- There are a couple audiences that could stand to benefit from an understanding of web scraping, the first one being researchers.
+
+	- From my experience working for CFIRE, scraping can be extremely valuable to researchers. Often times gov't data (and often private data as well) is locked away inside of poorly designed websites, imperfect APIs, or interactive maps, making the gathering of data time nearly impossible unless it can be done programatically. A former coworker often joked that he wished websites would have a "Download all the data" button, instead of only revealing a state or 10 records at a time. Being able to easily access this data is a powerful tool that can give researchers access to sources previously inaccessible.
+
+	- Another group that could, and does benefit from web scraping is journalists
+
+	- Writing and investigating stories is often data-driven, and frequently this data does not come in a format that would be meaningful to the audience. Therefore, it is often imperative to transform the data to something that makes it easier for the journalist to analyze the data, and also for the audience to digest it.
+
+	- Also, if you're anything like me, scraping is also just a fun activity to do in your free time. If you're the type of person who is curious and likes to do personal research, or maybe you want to create a product for the public good in your spare time, scraping can be quite valuable. Last summer before the Olympics, I started to wonder what the geographic distribution of athletes on Team USA looked like, and found that the official website for Team USA contained the hometown of all the athletes, and was able to scrape all 800-some HTML pages of that data and make a simple map. So, if you get excited by these types of things, it can be an interesting use of your time. 
+
+* Change *
+	
+	- This is a question that I frequently ask myself, and it has also frequently been asked of me.
+	- I wish I had a good answer, but reasons vary. I think most of the time it is because the data provider doesn't recognize themself as such, or doesn't realize the value of their data. Most of the government agencies providing data probably don't have the funding to improve the way they deliver data, if they do at all. Some organizations or companies also sometimes have concerns over the way the data could be used, or don't want to be responsible for updating it at regular intervals.
+
+	- Likewise, for most data providers, the publishing of data is an afterthought, and not usually done in an efficient manner, and part of what we do is simply organize data in ways they never thought of. 
+
+	- I have occassionally run into potential data providers who see the value in sharing their data, but are scared that they might inform their competitors and loose a competitive advantage. This was especially true while working at CFIRE and hearing from trucking companies who were interested in our research, but because they filled a niche market, they knew that if they released their data, even annonomously, their competitors would know immediately who it came from and what their secrets might be. 
+
+* Change *
+
+Picking the right source
+
+	- The first, and perhaps most important step of the process is picking and choosing what is worth your time. The amount of effort you put in will most likely be very closely related to how important the data is to you. There is ALMOST always a way to extract data from any source, but it can often be time prohibitive to do so. For example, if you wanted to extract hand written text from a million PDFs, I'm sure you could write a very nice piece of image recognition software to extract what is relevant to you, but most people do not have the time, money, or skill to do that. However, if you are a researcher at a software company interested in creating a product that does this, I'm sure you'll accomplish it.
+
+* Change *
+
+	- You don't want to attempt to scrape something that is broad or nonspecific, i.e. a Google search for "cats". It's not really data, right?
+
+* Change *
+
+	- You DO however want something in a nice, machine-readable format, such as JSON...
+
+* Change * 
+
+	- ...or XML...
+
+* Change *
+
+	- ...or even an HTML table, especially if it the data you want to retrieve is nicely formatted. I once scrapped a website where the data I wanted was the only thing in a div with a unique ID, which made searching the document quite easy. In this case, you could just use Excel's "Import from webpage" button, and immediately have a nice spreadsheet.
+
+* Change *
+
+	- Data extraction isn't just limited to data in a serialized format - you can also often extract data contained in interactive maps. A colleague of mine was looking for data on all natural gas powerplants in the US, and the only place he could find it was this interactive map made by EIA using the ArcGIS Flex viewer and a ArcGIS Server REST API. Because of that, it was easy to see the ArcServer endpoint being called, and manipulate it in such a way that I was able to programmatically download all layers in the map as a JSON, and then transform them to a usable format.  
+
+* Change *
+
+	- Although not really scraping per say, it's often very easy to grab the data used in javascript-based web maps, but the point is that scraping is not limited to serialized data, and could even include the data that is driving graphs or charts.
+
+* Change *
+
+	- Until now, I haven't really discussed geometry or geographic data very much because, as previously mentioned, I'm mostly interested in scraping data that does not contain geometry, but that we can latch to geometry on the fly. While preparing for this talk, I was thinking about how I have been using data to create maps, and realized that I have been latching tabular data in a CSV to geometry stored as Topojson, which, if you are not familiar with it, is a way to encode topology as a JSON, which greatly reduces file sizes. I think I started doing it most because I was being given data as a CSV, and using Topojson because I was interested in keeping page loads as small as possible, but have since realized it's actually a very efficient way to handle geographic data in a web browser.
+
+* Change *
+
+	- As an example, the 10m Natural Earth shapefile of sovereign states weighs in at about 11mb. If we open it in QGIS, and save it as a GeoJSON, it is 24.7mb. If we save the attributes of the shapefile as a CSV, and convert the shapefile geometry to TopoJSON, preserving a unique ID field, the combination of the CSV and the Topojson is 2mb. That means that saved in this way, the same data is 18% the size of the original shapefile, and 8% of the GeoJSON. 
+
+	- I'm not sure how meaningful this really is, but I do think it's an interesting way of looking at geographic data in a web environment, and in the context of this kind of data scraping, keeping the data and the geometry seperate is usually a necessity, but I would really like to see a geographic data standard that leverages the efficiency of these methods of storage. 
+
+* Change *
+
+	- I'd like to mention that when scraping data, it's a good idea have API limits and DDoS safeguards in mind. For example, if you have an error in your code where the loop hitting the API goes longer than you wanted it to, the monthly or daily request limit can be hit very quickly. Likewise, some websites have DDoS safeguards that will automatically blacklist an IP address if a certain number of GET requests are made in a small period of time from a single IP address, and it isn't hard to hit those if you have a script making the requests for you.
+
+	- To get around these restrictions, it's generally a good idea to save a snapshot of the data locally for testing before running your script entirely. To avoid server request limits, you could either pull all the data down in one request and then process the data locally, or you could slowly download the data overnight, making sure there is a fairly significant amount of time in between requests. Otherwise, familiarize yourself with the use of proxies and cycle through a list of them as you collect data to make sure you don't accidentally get blacklisted.
+
+* Change *
+
+	- As the saying goes, the best tool for the job is the one you're most comfortable with, and the beauty of open source is that there are almost always myriad tools at your disposal. You can do all these things with the scripting language of your choice, but I'm partial to Python the BeautifulSoup markup language navigation module for data collection, and Leaflet and D3 for presentation. That said, use what you're comfortable with. I've even heard of people using Node for scraping.
+
+	- As I know is readily apparent to all of you, there are a lot of reasons to use open source software, but arguably one of the most important is the ability to infinitely tweak and share code. I would love to see larger community efforts towards repeatedly extracting public data, and I've seen some really neat examples of people working toward this. 
+
+* Change *
+
+	- For example, the city of Madison had many datasets they publish as spreadsheets on their website and frequently update, and at a meeting I was at someone demonstrated a web service they wrote on Rails that can create a queriable REST API out of flat datasets on the city of Madison's website. So for instance, they have a spreadsheet of the locations of parks, and using his service, you can do spatial queries, such as which park is closest to me.
+
+	- I think the neat part about this idea is that it takes the idea of "Open data" a step further in that it allows the community to play off of an individual's interpretation of what we can do with the data and then continue to improve upon it. 
+
+	- Alright, now I'm going to briefly show you a couple examples of projects I worked on that involved scraping in some capacity
+
+* Change * 
+
+	- The first one I'm going to talk about is the truck driver shortage. If you're anything like me, you probably had no idea that there was a massive shortage of truck drivers nationwide, and it's been causing big problems for trucking companies for some time now.
+
+	- The impetus for this was that going in, we were unable to find any specific data about the driver shortage, and it seemed like the only way it was quantifiable was that a lot of people were complaining about it. Most trucking companies were skeptical to share any data they had about what kind of economic impact this shortage was having on their bottom line, or just how many additional drivers they needed, so I started looking for different ways to quantify this issue.
+
+	- I started thinking about how I would look for a job, or vis-versa, how I would look for someone to hire, which led me to various job searching websites. After playing around with a few different job searching web sites, I discovered that Careerbuilder has an API for their data, which would make collecting it fairly straightforward. 
+
+* Change *
+
+	- For instance, if you search for "truck drivers" in Wisconsin on their website, you get a list of results like this, where as if you use their API...
+
+* Change *
+
+	- ..you get a nicely formatted list like this, which contains a count of the number of records found. 
+
+	- From here, it was just a matter of writing a Python script that could call their API once for each state, extract a count of the number of jobs posted, and put the result into a database for future use. Once that was done, 
+
+* Change *
+
+	- We created an interactive map that draws from the database as a way to visualize daily demand for truck drivers, as well as weekly and monthly trends. However, the map isn't research in itself - the idea is to collect data for an extended period of time, and see if there are any obvious trends, such as seasonal variations, or if it can be used as a proxy for economic activity or whatnot. But I'll leave that to the actual researchers.
+
+* Change *
+
+	- This next example involves collecting data from EIA, which is the US Energy Information Administration. If you have never checked out their website - do so! It's full of fantastic data, graphs, etc.
+
+	- My boss at the time was researching the impact of the transition from coal to natural gas that has been happening at powerplants in the last five years due to cheap natural gas prices, and what impact this transition might be having on the railroads who carry almost all the coal.
+
+* Change *
+
+	- We found out that EIA has data about every powerplant in the US,
+
+* Change *
+
+	- And for each powerplant, has Annual, monthly, and quarterly data for each type generator/fuel combination, as well as aggregated summaries. When you select one of these,
+
+* Change *
+
+	- You are given data about power generation, as well as a latitude and longitude for each powerplant. And as you may have noticed, they have an API for all this data, which is fantastic, but it's not always conducive to answer the types of questions you might have.
+
+	- Although all this detailed information is available, the ability to query it is extremely limited - for example, you can not simply get a list of powerplant locations, or a list of only powerplants that have coal-fueled generators. In order to ask questions like that, you need your own database of the data, so that's what I created. Using EIA's API, I wrote a Python script that worked through the tree-like structure of their data, starting with a list of powerplants, and then for each powerplant, finding all unique fuel/generator combinations, and then collecting the data from each. I ended up with a table in which each unique location/fuel/generator combination was a row, which then allowed us to create many views from which to examine the data. 
+
+* Change *
+
+	- Although this has very little to do with the research being done with the data, I created a simple map using Leaflet and D3 that shows only powerplants that have both coal and natural gas generators, the ratio of their utilization, and total energy output. By mapping this data that previously only existed in a database, you can see geographic variations in the adoption of natural gas and the abandonment of coal, which sometimes, but not always coincide with regions of natural gas extraction.
+
+* Change *
+
+	- That's all I have for today - I'd like to say thank you to CFIRE and the Mid America Freight Coalition for supporting my attendence of this conference and my months of tinkering under their roof. 
+
+* Change *
+	
+	- Otherwise, you can find my slides at the above url, and the scripts used in the examples on Github. 
+	- Thank you for attending, and hopefully we have some time for questions, if anyone has any
+
+
+
+
+
