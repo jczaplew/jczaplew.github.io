@@ -122,10 +122,11 @@ body {
   text-decoration: none;
 } 
 #resume {
-  background-color: rgb(208, 168, 37);
+  background-color: rgb(99, 165, 153);
+  color: #F5F5F5;
 }
 .resume {
-  background-color: rgba(208, 168, 37, 0.8);
+  background-color: rgba(99, 165, 153, 0.8);
 }
 
 .resumeContainer {
