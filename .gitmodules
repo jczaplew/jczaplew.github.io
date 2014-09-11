@@ -1,0 +1,3 @@
+[submodule "presentations/foss4g2014"]
+	path = presentations/foss4g2014
+	url = https://github.com/jczaplew/foss4g2014.git
