@@ -1,4 +1,4 @@
-html, body, .container-fluid, #titleRow {
+html, body, .container-fluid {
     height: 102%;
     position: relative;
   }
@@ -13,6 +13,9 @@ body {
 .row {
   margin-right:0;
   margin-left:0;
+}
+#titleRow {
+  height: 100%;
 }
 #titleHolder {
   width:100%;
@@ -51,6 +54,9 @@ body {
   bottom: -15px;
   left: 49%;
   z-index: 2;
+}
+.toc-row {
+  margin-top: 41px;
 }
 .toc {
   text-align: center;
