@@ -37,6 +37,7 @@ body {
 }
 .socialMedia:hover {
   color: #23A38F;
+  text-decoration: none;
 }
 #triangle {
   position: absolute;
@@ -47,8 +48,7 @@ body {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
-  bottom: 0;
-  margin-bottom: 27px;
+  bottom: -15px;
   left: 49%;
   z-index: 2;
 }
@@ -124,6 +124,19 @@ body {
 #resume {
   background-color: rgb(99, 165, 153);
   color: #F5F5F5;
+}
+.resume-title {
+  padding: 30px 20px;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: 'Exo', sans-serif;
+  letter-spacing: 5px;
+}
+.resume-title > a {
+  color: #ffffff;
+  letter-spacing: normal;
+  margin-right: 10px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .resume {
   background-color: rgba(99, 165, 153, 0.8);
@@ -387,6 +400,9 @@ body {
   .category > h1 {
     font-size: 26px;
     padding: 30px 0;
+  }
+  .resume-title > a {
+    display: none;
   }
 }
 @media(max-width: 505px) {
