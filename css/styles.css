@@ -166,6 +166,9 @@ body {
   .projectContainer {
     padding: 60px;
   }
+  #macrostrat-api {
+    background-image:url('/img/high/macrostrat_api.jpg');;
+  }
   #busmsn {
     background-image:url('/img/high/busmsn.jpg');;
   }
@@ -243,6 +246,9 @@ body {
   }
 }
 @media(max-width: 1450px) {
+  #macrostrat-api {
+    background-image:url('/img/medium/macrostrat_api.jpg');;
+  }
   #busmsn {
     background-image:url('/img/medium/busmsn.jpg');;
   }
@@ -322,6 +328,9 @@ body {
 @media(max-width: 900px) {
   .projectContainer {
     padding: 14px 25px;
+  }
+  #macrostrat-api {
+    background-image:url('/img/low/macrostrat_api.jpg');;
   }
   #busmsn {
     background-image:url('/img/low/busmsn.jpg');;
