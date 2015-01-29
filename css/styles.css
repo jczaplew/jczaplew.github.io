@@ -166,6 +166,9 @@ body {
   .projectContainer {
     padding: 60px;
   }
+  #gmna {
+    background-image:url('/img/high/gmna.jpg');;
+  }
   #macrostrat-api {
     background-image:url('/img/high/macrostrat_api.jpg');;
   }
@@ -246,6 +249,9 @@ body {
   }
 }
 @media(max-width: 1450px) {
+  #gmna {
+    background-image:url('/img/medium/gmna.jpg');;
+  }
   #macrostrat-api {
     background-image:url('/img/medium/macrostrat_api.jpg');;
   }
@@ -328,6 +334,9 @@ body {
 @media(max-width: 900px) {
   .projectContainer {
     padding: 14px 25px;
+  }
+  #gmna {
+    background-image:url('/img/low/gmna.jpg');;
   }
   #macrostrat-api {
     background-image:url('/img/low/macrostrat_api.jpg');;

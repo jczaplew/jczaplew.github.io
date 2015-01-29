@@ -13,3 +13,4 @@ My personal portfolio
 
 + Completely desaturated
 + Saved for web
++ Captured at 1440 x 225
