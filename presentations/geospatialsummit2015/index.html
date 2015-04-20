@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Wisconsin Geospatial Summit 2015</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="css/stack.v0.css" rel="stylesheet" type="text/css">
+    <style>
+
+    section {
+      background-image: url("images/background2.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #fff;
+      padding: 2em;
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+    }
+
+    a:link,
+    a:visited {
+      color: orange;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      height: 90%;
+      margin-top: 2.5%;
+    }
+
+    t {
+      color: #14D9FF;
+    }
+
+    j {
+      color: #4FC468;
+    }
+
+    .left {
+      text-align: left;
+    }
+
+    .image {
+      background: #000;
+      padding: 0;
+    }
+
+    .image-holder {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+    }
+
+    .image-holder > p {
+      margin-top: -8px;
+      font-size: 75%;
+    }
+
+    .image-holder-half {
+      height: auto;
+      width: 100%;
+      margin-top: 6%;
+    }
+
+    .image-white {
+      background-color: #fff;
+    }
+
+    .slide-image-small {
+      height: 75%;
+    }
+
+    .big {
+      font-size: 260%;
+      line-height: 130%;
+    }
+
+    .xbig {
+      font-size: 360%;
+      line-height: 115%;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .medium {
+      font-size: 160%;
+      line-height: 126%;
+    }
+    .medium-big {
+      font-size: 200%;
+    }
+    .medium {
+      text-align: left;
+    }
+
+    .centered-nolist {
+      list-style: none;
+      text-align: center;
+    }
+    iframe {
+      height: 100%;
+      width: 100%;
+    }
+
+    </style>
+  </head>
+  <body>
+    <section>
+      <section-content>
+        <h1 class="xbig">Sharing Data: A Guide</h1>
+        <div class="left">
+          <p>John J Czaplewski - <t>University of Wisconsin Geoscience Dept.</t><br>
+            <a href="https://twitter.com/johnjcz">@johnjcz</a></p>
+          Follow along - <a href="">johnjcz.com/presentations/geospatialsummit2015</a>
+        </div>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">I often wrangle data</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <p>
+          "In order to ensure that the Federal Government is taking full advantage of its information resources, executive departments and agencies...must manage information as an asset throughout its life cycle to promote <j>openness</j> and <j>interoperability</j>, and properly safeguard systems and information. Managing government information...will increase <j>operational efficiencies</j>, <j>reduce costs</j>, <j>improve services</j>, support mission needs, safeguard personal information, and <j>increase public access</j> to valuable government information."<br>
+          - <a href="https://www.whitehouse.gov/sites/default/files/omb/memoranda/2013/m-13-13.pdf">Executive Office of the President, 2013</a>
+        </p>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">Why give this talk?</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">What's data?</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content style="margin:0;">
+        <h1 class="big">Machine-readable <t>structured</t> information</h1>
+      </section-content>
+    </section>
+
+    <section class="image">
+      <div class="image-holder">
+        <img src="images/geojson.png" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image">
+      <div class="image-holder">
+        <img src="images/not-maps.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="images/not-charts.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">Sharing</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content style="margin:0;">
+        <h1 class="big">Public</h1>
+        <h1 class="big">Private</h1>
+        <h1 class="big">Internal</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">3NF</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">Consistent data types</h1>
+      </section-content>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="images/data-types.png" class="slide-image slide-image-small">
+      </div>
+    </section>
+
+    <section>
+      <section-content style="margin:0;">
+        <ul class="medium medium-big centered-nolist">
+          <li>\N</li>
+          <li>null</li>
+          <li>0</li>
+          <li>""</li>
+          <li>Unknown</li>
+        </ul>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig"><t>How to fix:</t> Consistency</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">Does it make sense to you?</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig"><t>How to fix:</t> Colleagues</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">Spatial considerations</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="big">Your users' needs <br>!=<br> your needs</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">Just Say No <br><j>(to projections)</j></h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="big">Projections "...are great if a printer is how you share data" - <a href="https://vimeo.com/106853066">Calvin Metcalf</a></h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig"><t>How to fix:</t> WGS84 (4326)</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">Proprietary file formats</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content style="margin:0;">
+        <ul class="medium">
+          <li><strike>Personal geodatabase</strike></li>
+          <li><strike>Layer file (lyr)</strike></li>
+          <li><strike>MXD (mxd)</strike></li>
+          <li>Shapefile (shp)</li>
+          <li>File geodatabase (gbd)</li>
+          <li>GeoJSON (geojson)</li>
+          <li>Comma Separated Values (csv)</li>
+        </ul>
+      </section-content>
+    </section>
+    
+    <section>
+      <section-content>
+        <h1 class="xbig">Coordinate precision</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig"><t>How to fix:</t></h1>
+        <ul class="medium">
+          <li><a href="http://www.gdal.org/drv_geojson.html">ogr2ogr</a></li>
+          <li><a href="https://www.npmjs.com/package/geojson-precision">geojson-precision</a></li>
+          <li>Excel/LibreOffice/OpenOffice</li>
+        </ul>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">Other Considerations</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">License!</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="big"><t>How to fix:</t> <a href="https://creativecommons.org/choose/">CC license picker</a></h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">Advertise</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="big"><t>How to fix:</t> provide <a href="#">links</a></h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">Datasets shouldn't be ❄️</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="big"><t>How to fix:</t> be detailed and general</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">Metadata</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="big"><t>How to fix:</t> README</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">Be proud of your clean, interoperable data!</h1>
+      </section-content>
+    </section>
+
+
+    <section>
+      <section-content>
+        <h1 class="xbig">Thanks!</h1>
+        <div class="left">
+          <p>Slides - <a href="">johnjcz.com/presentations/geospatialsummit2015</a>
+          </p>
+          <p><a href="https://twitter.com/johnjcz"><t>@johnjcz</t></a></p>
+        </div>
+      </section-content>
+    </section>
+
+
+    <script src="js/d3.v3.min.js"></script>
+    <script src="js/stack.v1.min.js"></script>
+    <script type="text/javascript">
+      stack();
+    </script>
+  </body>
+</html>
