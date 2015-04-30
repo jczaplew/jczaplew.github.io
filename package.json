@@ -1,0 +1,27 @@
+{
+  "name": "johnjcz.com",
+  "version": "1.0.0",
+  "description": "Personal website for John Czaplewski",
+  "main": "index.html",
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-csslint": "^0.1.5",
+    "gulp-htmlhint": "^0.1.1"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jczaplew/jczaplew.github.io.git"
+  },
+  "author": "John J Czaplewski <jczaplew@gmail.com>",
+  "license": "CC-BY",
+  "bugs": {
+    "url": "https://github.com/jczaplew/jczaplew.github.io/issues"
+  },
+  "homepage": "https://github.com/jczaplew/jczaplew.github.io"
+}

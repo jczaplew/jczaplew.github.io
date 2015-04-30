@@ -4,10 +4,10 @@
 
   + I'm John, a mapper and developer in the Geoscience Dept. here on campus, and the lead engineer on two NSF-sponsored grants.
 *Change*
-  + A large part of my job involves working with external data, such as that from USGS, as well as crafting services, such as APIs and map tiles, to distribute our data, thus I've spent a lot of time and effort considering what works and what does not when it comes to sharing data
+  + A large part of my job involves working with external data, such as that from USGS, as well as crafting services, such as APIs and map tiles, to distribute our data, thus I've spent a lot of time and effort considering what works and what does not when it comes to sharing data as both a producer and consumer.
 *Change*
-  + Because our lab is part of a large public university and funded by federal dollars, we are obligated to abide by NSF's data sharing policy (http://www.nsf.gov/bfa/dias/policy/dmp.jsp), and in my opinion, the spirit of the White House's Open Data Policy (https://www.whitehouse.gov/sites/default/files/omb/memoranda/2013/m-13-13.pdf)
-  + Which promotes openness, interoperability, efficiency, reduced costs, and better public access to government information -
+  + Because our lab is part of a large public university and funded by federal dollars, I think following the spirit of the White House's Open Data Policy is important, as
+  + It promotes openness, interoperability, efficiency, reduced costs, and better public access to government information.
   + Additionally, as a taxpayer and public employee, I feel a strong duty to make everything I do freely available to those who pay my salary (i.e. everyone in the US), and also believe that if tax dollars pay your salary, you also have an obligation to share everything you do.
   + If you're not a public employee and not obligated to share your data, chances are you'll need to share your data with someone at somepoint, whether it be a colleague, a client, or yourself 9 months from now. Either way, the same ideas for data sharing apply to you.
 *Change*
@@ -17,14 +17,14 @@
   + This is surprising because no matter what you do as a geospatial professional, you will be manipulating, handling, and more likely than not, sharing data.
   + As a field, our general lack of attention to detail in this realm costs us an inestimable number of hours in dealing with poorly designed data, holding us back from doing interesting things with the data.
   + Because of this, it's important to consider what constitutes "good" data, and how you can make sure that your data does not cause you, your collegaues, or clients headaches
-
+*Change*
 
 ### What's data?
   + Although it seems like an easy question, it's not and is highly subjective
 *Change*
   + For the sake of this presentation, I'm going to define it as machine-readable structured information (not a good definition, but we'll go with it for now)
 *Change*
-  + More specifically, I'm going to focus on geographic data
+  + More specifically, I'm going to focus on geographic data, and even more specifically, vector data
 *Change*
   + To be more clear, I'm not talking about the products of data, such as maps, visualizations, charts, etc.
 *Change*, *Change*
@@ -37,13 +37,14 @@
   + Privately could include exchanging data with a client, or the buying or selling of data between private parties.
   + Interval includes things like sharing data among colleagues and team members, but more often includes sharing data with future you. 
   + This is especially important because we often spend a lot of time figuring out what we did 6 months ago
+  + I mostly bring this up to drive home that data sharing is very broadly defined, and everyone does it
 *Change*
   + 3rd normal form for distributing...always
   + One column for each variable, one value, no repitition
   + Rows are observations or data points
   + Very flexible...allows many ways to look at the data
   + I'm not going to get into this in too much detail, as it probably deserves an entire semester of lectures, but if you are not familiar with it, it is worth reading up on.
-  + It's something that was completely glossed over in my education, and I definitely went through some growing pains not being aware of it.
+  + It's something that was completely glossed over in my formal education, and I definitely went through some growing pains not being aware of it.
 *Change*
   + Values should be consistent (data type, text values should be similar, encoding, null values) !!! This is really important
 *Change*
@@ -62,9 +63,9 @@
 ### Geo considerations for sharing
   + Assume that no one else is going to do the same thing with your data as you...if you operate on this premise, you'll quickly realize that sharing data with projections is a bad idea
 *Change*
-  + Projections are an opinion or suggestion for how the data should be stored and visualized. These go along with maps/visualizations, are inappropriate for distribution and sharing
+  + Projections are an opinion or suggestion for how the data should be stored and visualized. These go along with maps/visualizations, and are inappropriate for distribution and sharing
 *Change*
-  + Calvin Metcalf gave a great talk at FOSS4G last year title "Projections on the web are terrible and you should be ashamed of yourself". While slightly inflamatory, one of my favorite quotes from it was that Projections "..are great if a printer is how you share data" - Calvin Metcalf
+  + Calvin Metcalf gave a great talk at FOSS4G last year title "Projections on the web are terrible and you should be ashamed of yourself". While slightly inflamatory, one of my favorite quotes from it was that Projections "..are great if a printer is how you share data"
   + In the past geographic transformations were really complex and required a lot of time and effort - for example, change that paper map of the world on your wall to a Waterman Butterfly...it'll take a while
   + However, nowadays we can reproject on the fly. You can store and visualize your data in any projection you want, 
 *Change*  

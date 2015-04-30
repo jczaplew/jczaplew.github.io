@@ -14,10 +14,10 @@ body {
   margin-right:0;
   margin-left:0;
 }
-#titleRow {
+.titleRow {
   height: 100%;
 }
-#titleHolder {
+.titleHolder {
   width:100%;
   height:95%;
   text-align: center;
@@ -30,7 +30,7 @@ body {
   vertical-align: middle;
   font-family: 'Exo', sans-serif;
 }
-.titleContent > h1 {
+.me {
   font-size:4em;
   letter-spacing: 0.1em;
 }
@@ -42,15 +42,16 @@ body {
   color: #23A38F;
   text-decoration: none;
 }
-#triangle {
+.triangle {
   position: absolute;
   height: 30px;
   width: 30px;
   background-color: #B7C11E;
-  transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
   bottom: -15px;
   left: 49%;
   z-index: 2;
@@ -80,56 +81,57 @@ body {
   height: 315px;
   display: table;
 }
-.category > h1 {
+.categoryTitle  {
   padding: 30px 20px;
   display: table-cell;
   vertical-align: middle;
   font-family: 'Exo', sans-serif;
   letter-spacing: 5px;
 }
-#projects {
-  background-color: #589494;
+.whitesmoke {
   color: #F5F5F5;
 }
+.projects {
+  background-color: #589494;
+}
 .project {
+  background-color: rgb(88, 148, 148);
   background-color: rgba(88, 148, 148, 0.8);
-  color: #F5F5F5;
   background-repeat: repeat-x;
 }
 .projectContainer {
+  background-color: rgb(88, 148, 148);
   background-color: rgba(88, 148, 148, 0.7);
   padding: 60px;
   margin-left: -15px;
   margin-right: -15px;
 }
-.projectContainer > h2 > a {
+.projTitle > a {
   color: #F5F5F5;
 }
-.projectContainer > h2 > a:hover {
+.projTitle > a:hover {
   color: #F5F5F5;
   text-decoration: none;
 }
-#presentations {
+.presentations {
   background-color: #206978;
-  color: #F5F5F5;
 }
 .presentationContainer {
+  background-color: rgb(32, 105, 120);
   background-color: rgba(32, 105, 120, 0.8);
   padding: 60px;
   margin-left: -15px;
   margin-right: -15px;
-  color: #F5F5F5;
 }
-.presentationContainer > h3 > a {
+.presentationTitle > a {
   color: #F5F5F5;
 } 
-.presentationContainer > h3 > a:hover {
+.presentationTitle > a:hover {
   color: #F5F5F5;
   text-decoration: none;
 } 
-#resume {
-  background-color: rgb(99, 165, 153);
-  color: #F5F5F5;
+.resumes {
+  background-color: rgb(120,32,61);
 }
 .resume-title {
   padding: 30px 20px;
@@ -145,7 +147,10 @@ body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .resume {
-  background-color: rgba(99, 165, 153, 0.8);
+  background-color: rgb(120,32,61);
+  background-color: rgba(120,32,61, 0.8);
+  color: #fff;
+  font-weight: 200;
 }
 
 .resumeContainer {
@@ -158,176 +163,201 @@ body {
   display: inline-block;
   margin-right: 20px;
 }
-#poster {
+.resumeSection {
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  padding-top: 20px;
+}
+.resumeItemContainer {
+  background-color: rgb(255,255,255);
+  background-color: rgba(255,255,255,0.1);
+  padding: 25px;
+  margin-bottom: 15px;
+}
+.resumeItemContainerTitle {
+  font-size: 18px;
+  color: #f2f2f2;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.resumeItemContainerSubtitle {
+  margin-left: 12px;
+  font-weight: 600;
+}
+.poster {
   color: #333;
+}
+.no-list {
+  list-style: none;
 }
 
 @media(max-width: 3000px) {
   .projectContainer {
     padding: 60px;
   }
-  #gmna {
+  .gmna {
     background-image:url('/img/high/gmna.jpg');;
   }
-  #macrostrat-api {
+  .macrostrat-api {
     background-image:url('/img/high/macrostrat_api.jpg');;
   }
-  #busmsn {
+  .busmsn {
     background-image:url('/img/high/busmsn.jpg');;
   }
-  #navigator {
+  .navigator {
     background-image: url('/img/high/navigator.jpg');
   }
-  #team_usa_sochi {
+  .team_usa_sochi {
     background-image: url('/img/high/team_usa_sochi.jpg');
   }
-  #macrostrat_map {
+  .macrostrat_map {
     background-image:url('/img/high/macrostrat.jpg');
   }
-  #paleobiodb {
+  .paleobiodb {
     background-image:url('/img/high/paleobiodb.jpg');
   }
-  #pioneer {
+  .pioneer {
     background-image:url('/img/high/pioneer.jpg');
   }
-  #acmp {
+  .acmp {
     background-image:url('/img/high/acmp.jpg');
   }
-  #michigan_basin {
+  .michigan_basin {
     background-image:url('/img/high/michigan_basin.jpg');
   }
-  #webmap_template_eia {
+  .webmap_template_eia {
     background-image:url('/img/high/webmap_template_eia.jpg');
   }
-  #webmap_template_corridors {
+  .webmap_template_corridors {
     background-image:url('/img/high/webmap_template_corridors.jpg');
   }
-  #ecycle {
+  .ecycle {
     background-image:url('/img/high/ecycle.jpg');
   }
-  #subway {
+  .subway {
     background-image:url('/img/high/subway.jpg');
   }
-  #pronounce {
+  .pronounce {
     background-image:url('/img/high/pronounce.jpg');
   }
-  #dlccc {
+  .dlccc {
     background-image:url('/img/high/dlccc.jpg');
   }
-  #frac_sands {
+  .frac_sands {
     background-image:url('/img/high/frac_sands.jpg');
   }
-  #policy {
+  .policy {
     background-image:url('/img/high/policy.jpg');
   }
-  #renewable {
+  .renewable {
     background-image:url('/img/high/renewable.jpg');
   }
-  #team_usa_london {
+  .team_usa_london {
     background-image:url('/img/high/team_usa_london.jpg');
   }
-  #cashfree {
+  .cashfree {
     background-image:url('/img/high/cashfree.jpg');
   }
-  #federal_spending {
+  .federal_spending {
     background-image:url('/img/high/federal_spending.jpg');
   }
-  #hoofermountaineering {
+  .hoofermountaineering {
     background-image:url('/img/high/hoofermountaineering.jpg');
   }
-  #jmt {
+  .jmt {
     background-image:url('/img/high/jmt.jpg');
   }
-  #dl_bouldering {
+  .dl_bouldering {
     background-image:url('/img/high/dl_bouldering.jpg');
   }
-  #europe {
+  .europe {
     background-image:url('/img/high/europe.jpg');
   }
-  #obesity {
+  .obesity {
     background-image:url('/img/high/obesity.jpg');
   }
 }
 @media(max-width: 1450px) {
-  #gmna {
+  .gmna {
     background-image:url('/img/medium/gmna.jpg');;
   }
-  #macrostrat-api {
+  .macrostrat-api {
     background-image:url('/img/medium/macrostrat_api.jpg');;
   }
-  #busmsn {
+  .busmsn {
     background-image:url('/img/medium/busmsn.jpg');;
   }
-  #navigator {
+  .navigator {
     background-image: url('/img/medium/navigator.jpg');
   }
-  #team_usa_sochi {
+  .team_usa_sochi {
     background-image: url('/img/medium/team_usa_sochi.jpg');
   }
-  #macrostrat_map {
+  .macrostrat_map {
     background-image:url('/img/medium/macrostrat.jpg');
   }
-  #paleobiodb {
+  .paleobiodb {
     background-image:url('/img/medium/paleobiodb.jpg');
   }
-  #pioneer {
+  .pioneer {
     background-image:url('/img/medium/pioneer.jpg');
   }
-  #acmp {
+  .acmp {
     background-image:url('/img/medium/acmp.jpg');
   }
-  #michigan_basin {
+  .michigan_basin {
     background-image:url('/img/medium/michigan_basin.jpg');
   }
-  #webmap_template_eia {
+  .webmap_template_eia {
     background-image:url('/img/medium/webmap_template_eia.jpg');
   }
-  #webmap_template_corridors {
+  .webmap_template_corridors {
     background-image:url('/img/medium/webmap_template_corridors.jpg');
   }
-  #ecycle {
+  .ecycle {
     background-image:url('/img/medium/ecycle.jpg');
   }
-  #subway {
+  .subway {
     background-image:url('/img/medium/subway.jpg');
   }
-  #pronounce {
+  .pronounce {
     background-image:url('/img/medium/pronounce.jpg');
   }
-  #dlccc {
+  .dlccc {
     background-image:url('/img/medium/dlccc.jpg');
   }
-  #frac_sands {
+  .frac_sands {
     background-image:url('/img/medium/frac_sands.jpg');
   }
-  #policy {
+  .policy {
     background-image:url('/img/medium/policy.jpg');
   }
-  #renewable {
+  .renewable {
     background-image:url('/img/medium/renewable.jpg');
   }
-  #team_usa_london {
+  .team_usa_london {
     background-image:url('/img/medium/team_usa_london.jpg');
   }
-  #cashfree {
+  .cashfree {
     background-image:url('/img/medium/cashfree.jpg');
   }
-  #federal_spending {
+  .federal_spending {
     background-image:url('/img/medium/federal_spending.jpg');
   }
-  #hoofermountaineering {
+  .hoofermountaineering {
     background-image:url('/img/medium/hoofermountaineering.jpg');
   }
-  #jmt {
+  .jmt {
     background-image:url('/img/medium/jmt.jpg');
   }
-  #dl_bouldering {
+  .dl_bouldering {
     background-image:url('/img/medium/dl_bouldering.jpg');
   }
-  #europe {
+  .europe {
     background-image:url('/img/medium/europe.jpg');
   }
-  #obesity {
+  .obesity {
     background-image:url('/img/medium/obesity.jpg');
   }
 }
@@ -335,93 +365,93 @@ body {
   .projectContainer {
     padding: 14px 25px;
   }
-  #gmna {
+  .gmna {
     background-image:url('/img/low/gmna.jpg');;
   }
-  #macrostrat-api {
+  .macrostrat-api {
     background-image:url('/img/low/macrostrat_api.jpg');;
   }
-  #busmsn {
+  .busmsn {
     background-image:url('/img/low/busmsn.jpg');;
   }
-  #navigator {
+  .navigator {
     background-image: url('/img/low/navigator.jpg');
   }
-  #team_usa_sochi {
+  .team_usa_sochi {
     background-image: url('/img/low/team_usa_sochi.jpg');
   }
-  #macrostrat_map {
+  .macrostrat_map {
     background-image:url('/img/low/macrostrat.jpg');
   }
-  #paleobiodb {
+  .paleobiodb {
     background-image:url('/img/low/paleobiodb.jpg');
   }
-  #pioneer {
+  .pioneer {
     background-image:url('/img/low/pioneer.jpg');
   }
-  #acmp {
+  .acmp {
     background-image:url('/img/low/acmp.jpg');
   }
-  #michigan_basin {
+  .michigan_basin {
     background-image:url('/img/low/michigan_basin.jpg');
   }
-  #webmap_template_eia {
+  .webmap_template_eia {
     background-image:url('/img/low/webmap_template_eia.jpg');
   }
-  #webmap_template_corridors {
+  .webmap_template_corridors {
     background-image:url('/img/low/webmap_template_corridors.jpg');
   }
-  #ecycle {
+  .ecycle {
     background-image:url('/img/low/ecycle.jpg');
   }
-  #subway {
+  .subway {
     background-image:url('/img/low/subway.jpg');
   }
-  #pronounce {
+  .pronounce {
     background-image:url('/img/low/pronounce.jpg');
   }
-  #dlccc {
+  .dlccc {
     background-image:url('/img/low/dlccc.jpg');
   }
-  #frac_sands {
+  .frac_sands {
     background-image:url('/img/low/frac_sands.jpg');
   }
-  #policy {
+  .policy {
     background-image:url('/img/low/policy.jpg');
   }
-  #renewable {
+  .renewable {
     background-image:url('/img/low/renewable.jpg');
   }
-  #team_usa_london {
+  .team_usa_london {
     background-image:url('/img/low/team_usa_london.jpg');
   }
-  #cashfree {
+  .cashfree {
     background-image:url('/img/low/cashfree.jpg');
   }
-  #federal_spending {
+  .federal_spending {
     background-image:url('/img/low/federal_spending.jpg');
   }
-  #hoofermountaineering {
+  .hoofermountaineering {
     background-image:url('/img/low/hoofermountaineering.jpg');
   }
-  #jmt {
+  .jmt {
     background-image:url('/img/low/jmt.jpg');
   }
-  #dl_bouldering {
+  .dl_bouldering {
     background-image:url('/img/low/dl_bouldering.jpg');
   }
-  #europe {
+  .europe {
     background-image:url('/img/low/europe.jpg');
   }
-  #obesity {
+  .obesity {
     background-image:url('/img/low/obesity.jpg');
   }
 }
 @media(max-width: 675px) {
-  .toc > a > h2 {
+  .toc-title {
     font-size: 20px;
   }
-  .category > h1 {
+  .categoryTitle{
     font-size: 26px;
     padding: 30px 0;
   }
@@ -430,7 +460,7 @@ body {
   }
 }
 @media(max-width: 505px) {
-  .category > h1 {
+  .categoryTitle {
     font-size: 22px;
     padding: 30px 0;
   }
@@ -439,16 +469,16 @@ body {
   .toc {
     padding: 20px 8px;
   }
-  .toc > a > h2 {
+  .toc-title {
     font-size: 15px;
   }
-  .projectContainer > h2 {
+  .projTitle {
     font-size: 21px;
   }
   .projectContainer {
     padding: 9px 25px;
   }
-  .titleContent > h1 {
+  .me {
     font-size: 3em;
   }
   .presentationContainer {
