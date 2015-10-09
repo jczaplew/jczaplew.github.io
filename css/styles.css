@@ -125,11 +125,11 @@ body {
 }
 .presentationTitle > a {
   color: #F5F5F5;
-} 
+}
 .presentationTitle > a:hover {
   color: #F5F5F5;
   text-decoration: none;
-} 
+}
 .resumes {
   background-color: rgb(120,32,61);
 }
@@ -195,6 +195,12 @@ body {
 @media(max-width: 3000px) {
   .projectContainer {
     padding: 60px;
+  }
+  .macrostrat_home {
+    background-image:url('/img/high/macrostrat_home.jpg');;
+  }
+  .sift {
+    background-image:url('/img/high/sift.jpg');;
   }
   .gmna {
     background-image:url('/img/high/gmna.jpg');;
@@ -279,6 +285,12 @@ body {
   }
 }
 @media(max-width: 1450px) {
+  .macrostrat_home {
+    background-image:url('/img/high/macrostrat_home.jpg');;
+  }
+  .sift {
+    background-image:url('/img/high/sift.jpg');;
+  }
   .gmna {
     background-image:url('/img/medium/gmna.jpg');;
   }
@@ -364,6 +376,12 @@ body {
 @media(max-width: 900px) {
   .projectContainer {
     padding: 14px 25px;
+  }
+  .macrostrat_home {
+    background-image:url('/img/low/macrostrat_home.jpg');;
+  }
+  .sift {
+    background-image:url('/img/low/sift.jpg');;
   }
   .gmna {
     background-image:url('/img/low/gmna.jpg');;
