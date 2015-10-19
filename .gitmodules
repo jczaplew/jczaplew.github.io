@@ -6,4 +6,4 @@
 	url = https://github.com/jczaplew/mapshop.git
 [submodule "leaflet-randomtilelayer"]
 	path = leaflet-randomtilelayer
-	url = git@github.com:jczaplew/leaflet-randomtilelayer.git
+	url = https://github.com/jczaplew/leaflet-randomtilelayer.git
