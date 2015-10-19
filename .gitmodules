@@ -4,3 +4,6 @@
 [submodule "presentations/mapshop2014"]
 	path = presentations/mapshop2014
 	url = https://github.com/jczaplew/mapshop.git
+[submodule "leaflet-randomtilelayer"]
+	path = leaflet-randomtilelayer
+	url = git@github.com:jczaplew/leaflet-randomtilelayer.git
