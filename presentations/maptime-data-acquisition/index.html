@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Maptime Madison - Data Acquisition</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="css/stack.v0.css" rel="stylesheet" type="text/css">
+    <style>
+
+    section {
+      background-image: url("img/background.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #fff;
+      padding: 2em;
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+    }
+
+    a:link,
+    a:visited {
+      color: orange;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      height: 90%;
+      margin-top: 2.5%;
+    }
+
+    t {
+      color: #14D9FF;
+    }
+
+    .left {
+      text-align: left;
+    }
+
+    .image {
+      background: #000;
+      padding: 0;
+    }
+
+    .image-holder {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+    }
+
+    .image-holder > p {
+      margin-top: -13px;
+      font-size: 85%;
+    }
+
+    .image-holder-half {
+      height: auto;
+      width: 100%;
+      margin-top: 6%;
+    }
+
+    .image-white {
+      background-color: #fff;
+    }
+
+    .big {
+      font-size: 260%;
+      line-height: 130%;
+    }
+
+    .xbig {
+      font-size: 360%;
+      line-height: 115%;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .medium {
+      font-size: 160%;
+      line-height: 126%;
+    }
+    ul.medium {
+      text-align: left;
+    }
+
+    </style>
+  </head>
+  <body>
+    <section>
+      <section-content>
+        <h1 class="xbig">Data Acquisition</h1>
+        <div class="left">
+          <p>John J Czaplewski - <t>University of Wisconsin Geoscience Dept.</t><br>
+            <a href="https://twitter.com/johnjcz">@johnjcz</a></p>
+        </div>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="big">Follow along</h1>
+        <p><a href="http://www.johnjcz.com/presentations/maptime-data-acquisition">http://www.johnjcz.com/presentations/maptime-data-acquisition</a></p>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">Data...?</h1>
+      </section-content>
+    </section>
+
+  <!--  <section>
+      <section-content style="margin:0;">
+        <h1 class="medium">A spatial representation, or set of information that can be mapped to a spatial representation, that is used to describe a phenomenon</h1>
+      </section-content>
+    </section>-->
+    <section>
+      <section-content style="margin:0;">
+        <h1 class="medium">A set of attributes matched to a representation of the physical world</h1>
+      </section-content>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/grid.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/grid_madison.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="big">Data -> Information -> Knowledge</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="big">
+          Why should I care?
+        </h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <ul class="medium">
+          <li>`cool_idea.shp` probably doesn't exist</li>
+          <li>Interesting things haven't been done</li>
+          <li>The world runs on PDFs and bad charts</li>
+        </ul>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">
+          Tools
+        </h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <ul class="medium">
+          <li>Curiosity</li>
+          <li>Patience</li>
+          <li>Knowing what resources exist*</li>
+          <li>(Some coding skills)</li>
+        </ul>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">
+          Portals
+        </h1>
+      </section-content>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/naturalearth.jpg" class="slide-image">
+        <p><a href="http://www.naturalearthdata.com">www.naturalearthdata.com</a></p>
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/natural_earth_mollweide.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/dnr.jpg" class="slide-image">
+        <p><a href="ftp://dnrftp01.wi.gov/geodata/">ftp://dnrftp01.wi.gov/geodata/</a></p>
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/wi_hydro.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/geoplatform.jpg" class="slide-image">
+        <p><a href="http://www.geoplatform.gov">www.geoplatform.gov</a></p>
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/glaciers.jpg" class="slide-image">
+        <p><a href="http://www.geoplatform.gov/node/243/da81a095-09be-4627-8594-e16b1a760d5e">http://www.geoplatform.gov/node/243/da81a095-09be-4627-8594-e16b1a760d5e</a></p>
+      </div>
+    </section>
+
+    <section>
+      <section-content>
+        <ul class="medium">
+          <li><a href="http://www.census.gov/data.html">Census</a></li>
+          <li><a href="http://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml">Fact Finder</a></li>
+          <li><a href="http://beta.usgs.gov/products/products.html#data">USGS</a></li>
+          <li><a href="https://data.cityofmadison.com/">City of Madison</a></li>
+          <li><a href="http://wiki.openstreetmap.org/wiki/Overpass_API">Overpass API</a></li>
+        </ul>
+      </section-content>
+    </section>
+
+
+    <section>
+      <section-content>
+        <h1 class="xbig">
+          Tables
+        </h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="big">
+          Tallest buildings in the world
+        </h1>
+        <p><a href="https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_the_world">https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_the_world</a></p>
+      </section-content>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/tallest_buildings_wiki.jpg" class="slide-image">
+        <p><a href="https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_the_world">https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_the_world</a></p>
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/tallest_buildings_wiki.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/addurl.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/imported.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/clear_formatting.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/cleared_formatting.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/regex.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/cleaned.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/gun_deaths_wiki.jpg" class="slide-image">
+        <p><a href="https://en.wikipedia.org/wiki/Number_of_guns_per_capita_by_country">https://en.wikipedia.org/wiki/Number_of_guns_per_capita_by_country</a></p>
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/gun_deaths_wiki_table.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/cleaned_guns.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="big">Website scraping</h1>
+      </section-content>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/team_usa.jpg" class="slide-image">
+        <p><a href="http://www.teamusa.org/athletes">www.teamusa.org/athletes</a></p>
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/team_usa_html.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/athlete_page.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/team_usa_scrape.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/team_usa_csv.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="big">Other options</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="big">Open records request</h1>
+      </section-content>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/citations_new.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/laser_radar_new.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section>
+      <section-content>
+        <ul class="medium">
+          <li>Write letters</li>
+          <li>Meet people</li>
+          <li>Collect your own!</li>
+          <li>There might be a reason you can't find it</li>
+        </ul>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">Geocoding</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="big">CartoDB Example</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <ul class="medium">
+          <li><a href="http://www.gpsvisualizer.com/geocoder/">GPSVisualizer</a></li>
+          <li><a href="https://github.com/geopy/geopy#geocoding">geopy</a></li>
+          <li><a href="http://postgis.net/docs/Geocode.html">PostGIS Tiger Geocoder</a></li>
+          <li><a href="https://mapzen.com/projects/search/">Mapzen Search (Pelias)</a></li>
+          <li><a href="http://geocoding.geo.census.gov/">Census geocoding API</a></li>
+          <li>Many others!</li>
+        </ul>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="big">Warning: geocoding is hard</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="big">Attribute Joins</h1>
+      </section-content>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/natural_earth.jpg" class="slide-image">
+        <p><a href="http://www.naturalearthdata.com/downloads/110m-cultural-vectors/">Admin 0 - Countries</a></p>
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/natural_earth_data.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/natural_earth_join.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/natural_earth_style.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section class="image image-white">
+      <div class="image-holder">
+        <img src="img/guns_projected.jpg" class="slide-image">
+      </div>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">Be nice</h1>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <ul class="medium">
+          <li>Read the terms of service</li>
+          <li>Find, read, and understand the license</li>
+          <li>Ask nicely</li>
+          <li>Give credit, cite</li>
+          <li>Don't thrash servers</li>
+        </ul>
+      </section-content>
+    </section>
+
+    <section>
+      <section-content>
+        <h1 class="xbig">Thanks!</h1>
+        <div class="left">
+          <p>Slides - <a href="http://www.johnjcz.com/presentations/maptime-data-acquisition">www.johnjcz.com/presentations/maptime-data-acquisition</a> <br>
+             Code/examples (CC0 1.0) - <a href="https://github.com/jczaplew/jczaplew.github.io">github.com/jczaplew/jczaplew.github.io</a>
+          </p>
+          <p><a href="https://twitter.com/johnjcz"><t>@johnjcz</t></a></p>
+        </div>
+      </section-content>
+    </section>
+
+    <script src="js/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/stack.v1.min.js"></script>
+    <script type="text/javascript">
+      stack();
+    </script>
+  </body>
+</html>
