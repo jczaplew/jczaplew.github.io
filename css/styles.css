@@ -196,6 +196,9 @@ body {
   .projectContainer {
     padding: 60px;
   }
+  .geodeepdive {
+    background-image:url('/img/high/geodeepdive.org.jpg');;
+  }
   .macrostrat_home {
     background-image:url('/img/high/macrostrat_home.jpg');;
   }
@@ -285,6 +288,9 @@ body {
   }
 }
 @media(max-width: 1450px) {
+  .geodeepdive {
+    background-image:url('/img/medium/geodeepdive.org.jpg');;
+  }
   .macrostrat_home {
     background-image:url('/img/high/macrostrat_home.jpg');;
   }
@@ -376,6 +382,9 @@ body {
 @media(max-width: 900px) {
   .projectContainer {
     padding: 14px 25px;
+  }
+  .geodeepdive {
+    background-image:url('/img/low/geodeepdive.org.jpg');;
   }
   .macrostrat_home {
     background-image:url('/img/low/macrostrat_home.jpg');;

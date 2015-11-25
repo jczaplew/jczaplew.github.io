@@ -14,27 +14,31 @@ Data...?
 ******
 Data definition
 a set of attributes matched to a representation of the physical world
++ "representation of the physical world" = coordinates/geometry
 + A lat/lng != data. A lat/lng + some attribute = data.
 + "that can be mapped to a spatial representation" - Wisconsin
 
 ******
+Example illustration
+
+******
 Data -> Information -> knowledge
-museums!
-data = y, information = x, knowledge = z & || t
++ museums!
++ data = y, information = x, knowledge = z & || t
 
 ******
 Why you should care
 
 ******
 Reasons why you should care
-(obscure map example)
-(tilted poorly scanned PDF)
++ If you're the first one to do it, no one has curated a dataset for you
 
 ******
 Tools
 
 ******
 List of tools
++ Soft skills more important than hard ones
 
 ******
 Portals
@@ -43,7 +47,7 @@ Portals
 Natural earth
 
 ******
-Natural earth countries
+Natural earth countries example
 
 ******
 Wisconsin DNR FTP
@@ -51,10 +55,11 @@ Wisconsin DNR FTP
 (Have a map of one of these datasets)
 
 ******
-Hydro 24k
+Hydro 24k example
 
 ******
 Federal geoplatform
++ Diverse datasets from federal agencies + some states and universities
 
 ******
 Glaciers
