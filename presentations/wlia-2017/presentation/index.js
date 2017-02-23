@@ -34,6 +34,7 @@ const images = {
   chulaVista: require("../assets/jpgs/chula_vista.jpg"),
   columbiaCountryGeoMap: require("../assets/jpgs/columbia_county_geologic_map.jpg"),
   columbiaCounty: require("../assets/jpgs/columbia_county.jpg"),
+  estonian: require("../assets/jpgs/estonian.jpg"),
   foc: require("../assets/jpgs/foc.jpg"),
   geobucky: require("../assets/jpgs/geobucky.jpg"),
   laIssue: require("../assets/jpgs/la_issue.jpg"),
@@ -42,6 +43,7 @@ const images = {
   nearbyUnits: require("../assets/jpgs/nearby_units.jpg"),
   ngmdbDells: require("../assets/jpgs/ngmdb_dells.jpg"),
   ngmdb: require("../assets/jpgs/ngmdb.jpg"),
+  ngmdbHome: require("../assets/jpgs/ngmdb_home.jpg"),
   nsf: require("../assets/jpgs/nsf.jpg"),
   oceanaComposite: require("../assets/jpgs/oceana_composite.jpg"),
   oldGMUS: require("../assets/jpgs/old_gmus.jpg"),
@@ -56,6 +58,7 @@ const images = {
   rockdSplash: require("../assets/jpgs/rockd_splash.jpg"),
   rocks: require("../assets/jpgs/rocks.jpg"),
   sauk: require("../assets/jpgs/sauk.jpg"),
+  stateFault: require("../assets/jpgs/state_fault.jpg"),
   utCO: require("../assets/jpgs/ut_co.jpg"),
   wisconsinBedrockGeology: require("../assets/jpgs/wisconsin_bedrock_geology.jpg")
 };
@@ -72,6 +75,7 @@ const theme = createTheme({
   secondary: "Helvetica"
 });
 
+
 export default class Presentation extends React.Component {
   render() {
     return (
@@ -80,7 +84,7 @@ export default class Presentation extends React.Component {
           <Heading size={3} caps lineHeight={1} textColor="tertiary">
             Integrating maps of all scales into user-friendly applications
           </Heading>
-          <Heading size={6} textColor="secondary" size={2} bold>
+          <Heading size={5} textColor="secondary" bold>
             John J Czaplewski
           </Heading>
           <Link href="https://twitter.com/johnjcz">
@@ -88,8 +92,46 @@ export default class Presentation extends React.Component {
           </Link>
         </Slide>
 
+        <Slide transition={["slide"]}>
+          <Heading size={3}>
+            Outline
+          </Heading>
+          <List>
+            <ListItem textColor="tertiary">Geologic maps</ListItem>
+            <ListItem>Other efforts</ListItem>
+            <ListItem>The database</ListItem>
+            <ListItem>Importing data</ListItem>
+            <ListItem>Applications enabled</ListItem>
+            <ListItem>Future steps</ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={["slide"]}>
+          <Heading size={3} textColor="tertiary">
+            Geologic Maps
+          </Heading>
+          <List>
+            <ListItem>Ages and types of rocks</ListItem>
+            <ListItem>Research and industry</ListItem>
+            <ListItem>Colored by age or rock type</ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={["slide"]} bgImage={images.burwellTiny}>
+          <Heading size={4} textColor="primary">tiny ~ 1:10,000,000</Heading>
+        </Slide>
+        <Slide transition={["slide"]} bgImage={images.burwellSmall}>
+          <Heading size={4} textColor="primary">small ~ 1:5,000,000</Heading>
+        </Slide>
+        <Slide transition={["slide"]} bgImage={images.burwellMedium}>
+          <Heading size={4} textColor="primary">medium ~ 1:1,000,000</Heading>
+        </Slide>
+        <Slide transition={["slide"]} bgImage={images.burwellLarge}>
+          <Heading size={4} textColor="primary">large ~ 1:100,000</Heading>
+        </Slide>
+
         <Slide transition={["slide"]} bgImage={images.rocks} bgDarken={0.4}>
-          <Text size={4} textColor="primary">What kind of rock are we standing on?</Text>
+          <Heading size={4} textColor="primary">What kind of rock are we standing on?</Heading>
         </Slide>
 
         <Slide transition={["slide"]} bgImage={images.ngmdb}/>
@@ -116,18 +158,42 @@ export default class Presentation extends React.Component {
           <Text size={4} textColor="secondary">Geologic maps are not typically made at small scales</Text>
         </Slide>
 
-        <Slide transition={["slide"]} bgImage={images.utCO}/>
+        <Slide transition={["slide"]} bgImage={images.stateFault}/>
 
         <Slide transition={["slide"]} bgImage={images.cartographer}/>
+
+        <Slide transition={["slide"]}>
+          <Heading size={3}>
+            Outline
+          </Heading>
+          <List>
+            <ListItem>Geologic maps</ListItem>
+            <ListItem textColor="tertiary">Other efforts</ListItem>
+            <ListItem>The database</ListItem>
+            <ListItem>Importing data</ListItem>
+            <ListItem>Applications enabled</ListItem>
+            <ListItem>Future steps</ListItem>
+          </List>
+        </Slide>
 
         <Slide transition={["slide"]} bgImage={images.onegeology}/>
 
         <Slide transition={["slide"]} bgImage={images.onegeologyEurope}/>
 
-        <Slide transition={["slide"]} bgImage={images.ngmdb}/>
+        <Slide transition={["slide"]} bgImage={images.ngmdbHome}/>
 
         <Slide transition={["slide"]}>
-          <Heading size={4} textColor="tertiary">Designing the database</Heading>
+          <Heading size={3}>
+            Outline
+          </Heading>
+          <List>
+            <ListItem>Geologic maps</ListItem>
+            <ListItem>Other efforts</ListItem>
+            <ListItem textColor="tertiary">The database</ListItem>
+            <ListItem>Importing data</ListItem>
+            <ListItem>Applications enabled</ListItem>
+            <ListItem>Future steps</ListItem>
+          </List>
         </Slide>
 
         <Slide transition={["slide"]} bgColor="primary" textColor="secondary">
@@ -171,22 +237,18 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
-        <Slide transition={["slide"]} bgColor="primary" textColor="secondary">
-          <Heading size={5} textColor="tertiary" caps>lines</Heading>
-          <List textSize="12px">
-            <ListItem textSize="20px"><Code textSize="30px">line_id</Code> - 206467</ListItem>
-            <ListItem textSize="20px"><Code textSize="30px">orig_id</Code> - 422</ListItem>
-            <ListItem textSize="20px"><Code textSize="30px">source_id</Code> - 6</ListItem>
-            <ListItem textSize="20px"><Code textSize="30px">name</Code> - NULL</ListItem>
-            <ListItem textSize="20px"><Code textSize="30px">type</Code> - Normal Fault</ListItem>
-            <ListItem textSize="20px"><Code textSize="30px">direction</Code> - NULL</ListItem>
-            <ListItem textSize="20px"><Code textSize="30px">descrip</Code> - fault, inferred, bar and ball on downthrown side</ListItem>
-            <ListItem textSize="20px"><Code textSize="30px">geom</Code> - 0106000020E610000001...</ListItem>
-          </List>
-        </Slide>
-
         <Slide transition={["slide"]}>
-          <Heading size={4} textColor="tertiary">Importing data</Heading>
+          <Heading size={3}>
+            Outline
+          </Heading>
+          <List>
+            <ListItem>Geologic maps</ListItem>
+            <ListItem>Other efforts</ListItem>
+            <ListItem>The database</ListItem>
+            <ListItem textColor="tertiary">Importing data</ListItem>
+            <ListItem>Applications enabled</ListItem>
+            <ListItem>Future steps</ListItem>
+          </List>
         </Slide>
 
         <Slide transition={["slide"]}>
@@ -195,6 +257,9 @@ export default class Presentation extends React.Component {
             <ListItem>Age</ListItem>
             <ListItem>Rock type</ListItem>
             <ListItem>(Stratigraphic names)</ListItem>
+            <ListItem>(Fossils)</ListItem>
+            <ListItem>(Oil/gas)</ListItem>
+            <ListItem>(interpretations)</ListItem>
           </List>
         </Slide>
 
@@ -203,7 +268,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["slide"]}>
-          <Image src={images.pdfDescriptions} height="100%"/>
+          <Image src={images.pdfDescriptions} width="100%"/>
         </Slide>
 
         <Slide transition={["slide"]}>
@@ -216,69 +281,77 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["slide"]}>
-          <Image src={images.processingProject} height="100%"/>
+          <Image src={images.estonian} width="100%"/>
         </Slide>
 
         <Slide transition={["slide"]}>
-          <Heading size={5} textColor="tertiary">Matching</Heading>
+          <Image src={images.processingProject} width="100%"/>
         </Slide>
 
         <Slide transition={["slide"]}>
-          <Heading size={1} fit caps textColor="tertiary">Making a map</Heading>
+          <Heading size={4} textColor="tertiary">Making a map</Heading>
         </Slide>
 
         <Slide transition={["slide"]}>
-          <Image src={images.foc} height="100%"/>
+          <Image src={images.foc} height="600px"/>
         </Slide>
 
         <Slide transition={["slide"]}>
-          <Text>[ 0, 1, 2, 3 ]      ::  "tiny"    :: [ "tiny" ]</Text>
-          <Text>   [ 4, 5]          ::  "small"   :: [ "small", "tiny" ]</Text>
-          <Text>[ 6, 7, 8, 9 ]      ::  "medium"  :: [ "medium", "small" ]</Text>
-          <Text>[ 10, 11, 12, 13 ]  ::  "large"   :: [ "large", "medium" ]</Text>
+          <Image src={images.sauk} width="100%"/>
+        </Slide>
+
+        <Slide transition={["slide"]} bgImage={images.pointQuery}>
+          <Text textSize="30px">https://macrostrat.org/api/v2/ geologic_units/burwell ?lat=43.4045&lng=-89.9512</Text>
         </Slide>
 
         <Slide transition={["slide"]}>
-          <Image src={images.sauk} height="100%"/>
+          <Image src={images.chulaVista} width="100%"/>
         </Slide>
 
         <Slide transition={["slide"]}>
-          <Image src={images.pointQuery} height="100%"/>
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Image src={images.chulaVista} height="100%"/>
-        </Slide>
-
-        <Slide transition={["slide"]}>
-          <Heading size={4} fit>Tilestrata (nodejs)</Heading>
+          <Heading size={2} textColor="tertiary">Tech</Heading>
+          <Heading size={4}>Tilestrata (nodejs)</Heading>
           <Heading size={4}>Redis</Heading>
         </Slide>
 
         <Slide transition={["slide"]}>
-          <Image src={images.rockdSplash} height="100%"/>
+          <Heading size={3}>
+            Outline
+          </Heading>
+          <List>
+            <ListItem>Geologic maps</ListItem>
+            <ListItem>Other efforts</ListItem>
+            <ListItem>The database</ListItem>
+            <ListItem>Importing data</ListItem>
+            <ListItem textColor="tertiary">Applications enabled</ListItem>
+            <ListItem>Future steps</ListItem>
+          </List>
         </Slide>
 
         <Slide transition={["slide"]}>
-          <Image src={images.rockdDashboard} height="100%"/>
+          <Image src={images.rockdSplash} width="100%"/>
         </Slide>
 
         <Slide transition={["slide"]}>
-          <Image src={images.rockdMap} height="100%"/>
+          <Image src={images.rockdDashboard} height="600px"/>
         </Slide>
 
         <Slide transition={["slide"]}>
-          <Image src={images.rockdFeed} height="100%"/>
+          <Image src={images.rockdMap} height="600px"/>
         </Slide>
 
         <Slide transition={["slide"]}>
-          <Image src={images.nearbyLithologies} height="100%"/>
-          <Image src={images.nearbyTaxa} height="100%"/>
-          <Image src={images.nearbyUnits} height="100%"/>
+          <Image src={images.rockdFeed} height="600px"/>
         </Slide>
 
         <Slide transition={["slide"]}>
-          <Heading size={5}>Next steps</Heading>
+          <Image src={images.nearbyLithologies} width="300px"/>
+          <Image src={images.nearbyTaxa} width="300px"/>
+          <Image src={images.nearbyUnits} width="300px"/>
+        </Slide>
+
+        <Slide transition={["slide"]}>
+          <Heading size={5} textColor="tertiary">Next steps</Heading>
           <List>
             <ListItem>More maps</ListItem>
             <ListItem>Offline maps in Rockd</ListItem>
@@ -288,9 +361,9 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["fade"]}>
-          <Heading fit caps>Thank you!</Heading>
-          <Text>http://johnjcz.com/presentations/wlia-2017</Text>
-          <Text>@johnjcz</Text>
+          <Heading size={4}>Thank you!</Heading>
+          <Text textSize="25px"><Text textColor="tertiary">Slides:</Text>http://johnjcz.com/presentations/wlia-2017</Text>
+          <Text textSize="25px"><Text textColor="tertiary">Map:</Text>https://macrostrat.org/burwell</Text>
           <Image src={images.nsf} height="150px"/>
           <Image src={images.geobucky} height="150px"/>
         </Slide>
