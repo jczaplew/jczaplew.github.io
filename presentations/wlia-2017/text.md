@@ -1,11 +1,25 @@
 (Introduce yourself)
 _Slide_
-Before we get started, I want to make sure we are all on the same page and explain geologic maps.
+First, I'll give you a brief overview of geologic maps, then talk about some other efforts that have been made to create a multiscale geologic map, give you an overview of our database, the challenges associated with importing data, and the applications this sort of database enables.
 
 _Slide_
- I want to give you a quick idea of what a multiscale geologic map looks like.
+Before we get started, I want to make sure we are all on the same page and explain geologic maps. Very simply, they are maps that show the ages and types of rocks in an area. They are used by researchers field work and putting their research in a greater geologic context, as well as by industry for fossil fuel extraction and mining. In all the maps you'll see today, they are colored by the age of the rock, with each color corresponding to one of the intervals from the international geologic time scale, but it is also common to see geologic maps colored by rock type.
 
 _Slide_
+When talking about multiscale geologic maps, I'm specifically referring to the scale-appropriate blending of maps of different scales into a single product. We divide our map up into 4 scales - tiny, small, medium, and large. This is tiny, which is used for global views.
+
+_Slide_
+Small is used for continental scale maps, such as this map of North America
+
+_Slide_
+Medium is used for state or province level maps, and
+
+_Slide_
+Large is used for county or USGS quad level maps
+
+_Slide_
+I'd like to frame the motivation for the creation of this database around this question because in our age smartphones and immediate access to almost any information, it is surprisingly difficult to answer. So,
+
 Does anyone know what kind of rock we are currently standing on? How old is it? If I wanted to learn more about, where would I look?
 
 Until we began assembling Macrostrat's geologic map database, these were questions that were not easy to answer. For example, to answer those questions, you could go to the National Geologic Map Database, _Slide_ zoom in to the Wisconsin Dells, _Slide_ and see what maps are available. If you did that, you would be presented with this nice map of the Quaternary geology of southeastern Wisconsin from 1918. _Slide_ You'd then have to download the 21 megabyte tiff file, open it up, and try and discern the colors to figure out which formation you might be standing on.
@@ -20,7 +34,7 @@ _Slide_
 When I first starting working with geologists, I was surprised by this. After all, everyone has seen old fashioned geologic maps of the United States, like this one from 1874, and surely by now we've mapped all the rocks and can easily access this data. It turns out this is not the case, and even though detailed geologic maps exist for almost every corner of the world, they are radically inaccessible to an ordinary person, and often times even professionals.
 
 _Slide_
-There are a couple of reasons why this is the case. In my mind, the most significant is that the mapping of bedrock geology has never been organized on a large scale. Even national geologic surveys, such as the USGS, are largely compilers of maps and data created by thousands of different geologists who had different priorities and interests at different points in time. Once the data is compiled, it is simply generalized to create maps at small scales. This is most obvious when you look at the geologic map of the US and see what we call "state line faults".
+There are a couple of reasons why this is the case. In my mind, the most significant is that the mapping of bedrock geology has never been organized on a national scale. Even national geologic surveys, such as the USGS, are largely compilers of maps and data created by thousands of different geologists who had different priorities and interests at different points in time. Once the data is compiled, it is simply generalized to create maps at small scales. This is most obvious when you look at the geologic map of the US and see what we call "state line faults".
 
 _Slide_
 A prime example is the border of South Carolina, Tennessee, and Georgia. The differences in the colors reflect the judgements of different geologists working in isolation, and their grouping of the same rocks into different age bins. Additionally, on the Tenneesse side the rocks are given specific names and ages, whereas on the Georgia side they are simply referred to by their rock type and placed in a general time bin that spans 3 and half billion years. I'm not making a value judgement on the geologists who created the state map of Georgia, but this discrepancy is presumably just an artifact of the goals and interests of the different geologists who created those maps.
@@ -32,10 +46,10 @@ This focus on maps for the field is also obvious in the file formats available f
 
 # Previous work
 _Slide_
-Outline update
+There have been previous efforts to blend multiscale geologic maps together
 
 _Slide_
-There have been previous efforts to blend multiscale geologic maps together - the first one being OneGeology.
+ - the first one being OneGeology.
 
 OneGeology is an international cooperative effort between the geological surveys of 121 countries. It is a great resource for visualizing geologic maps from all over the world, as it draws on the WMS services of all participating surveys. What it lacks is access to the underlying data and a homogenized data model.
 
@@ -50,7 +64,7 @@ _Slide_
 Before downloading a single map, we designed a database schema that would accommodate these heterogenous datasets and make the management of multiscale maps simple.
 
 _Slide_
-First, we created a table named `sources` to manage metadata about the original map sources. Each source is assigned a unique `source_id`, and contains attributes that make citing the original data simple.
+First, we created a table named `sources` to manage metadata about the original map sources. Each source is assigned an internally unique `source_id`, and contains attributes that make citing the original data simple.
 
 Even though our goal is to homogenize the data, the original data of each source is maintained in a schema named `sources`, with the table name corresponding to the field `primary_table` in the table `sources`. This allows us to link back to the original data of every single polygon in our database.
 
@@ -72,6 +86,7 @@ For most maps, spending hours copying and pasting attributes out of PDFs is a ne
 _Slide_
 International coverage is extremely challenging. When it comes to open access data, no other country comes close to the United States. In most places, if you can find evidence that a geologic map exists, it is often only available on a fee basis, often times in the cost-prohibitive model of charging by km2. Again, I believe this is a relic of the fact that geologic maps are commonly used by deep-pocketed energy companies for resource extraction. Even if you were to to pay the exorbitant costs for one of these maps, they are commonly distributed with extremely restrictive licenses that do not allow the user to modify or redistribute the data.
 
+_Slide_
 Translation can also be a very time consuming process. It took our intern almost the entire month of January to translate hundreds of unique values across multiple attributes of the geologic map of Germany, and she has been slowly making progress on translating Estonian so that we can ingest that map.
 
 We have made some progress on international maps, and right now we have maps at 1:1 million or better for Brazil, Canada, the UK, Spain, Switzerland, Germany, Sweden, South Africa, Afghanistan, Australia, and New Zealand. Needless to say, we are missing a few...
@@ -82,20 +97,12 @@ _Slide_
 # Making a map
 Once the data has reached the database, we obviously want to display it and share it in a sensible way. _Slide_ Very early on in the project, we were approached by Shane Loeffler and Amy Myrbo from the University of Minnesota about an idea they had for a mobile application that allowed users to learn about the landscape they were seeing from the window of an airplane. They knew we had been building a geologic map database, and thought it would be cool if they get extracts of our maps for their application. With these needs in mind, we created an API that allowed them to submit either two points and a buffer radius, or a polygon and in return receive an extract of our homogenized geologic map as a GeoJSON or TopoJSON. After they visited us and we mocked up a simple demo, they ran with it and produced the app Flyover Country which you can download for ios or android today. The beauty of this distribution model is that as our maps improve, so does their app.
 
-_SLIDE NEEEDED_
+_Slide_
 While this specific method is great for that type of application, it's not a great way to explore all of our geologic maps. Naturally, the next step was to tile the data. However, this presented some unique challenges.
 
 Obviously, the goal of an interactive multiscale geologic map is to display the "best" map available for the given scale you are looking at. For example, if I'm looking at the continental United States, the geologic map of the United States is more desirable than either the geologic map of the world (too coarse) or county-level maps (too detailed). However, if I'm looking at Africa at the same scale and there is no scale-appropriate map available, I'd rather have the geologic map of the world instead of nothing. These considerations necessitate not only a proper layering of the maps, but also a compositing.
 
-_Slide_
-When dealing with raster tiles, this is fairly straightforward. We first determine which zoom levels are associated with one of our four scales, and then determine an ideal stacking order for that scale.
 
-[ 0, 1, 2, 3 ]      ::  "tiny"    :: [ "tiny" ]
-   [ 4, 5]          ::  "small"   :: [ "small", "tiny" ]
-[ 6, 7, 8, 9 ]      ::  "medium"  :: [ "medium", "small" ]
-[ 10, 11, 12, 13 ]  ::  "large"   :: [ "large", "medium" ]
-
-_Slide_
 The result of this is a map that seamlessly blends together multiscale maps.
 
 _Slide_
