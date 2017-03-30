@@ -151,6 +151,7 @@ body {
   background-color: rgba(120,32,61, 0.8);
   color: #fff;
   font-weight: 200;
+  letter-spacing: 1px;
 }
 
 .resumeContainer {
@@ -195,6 +196,15 @@ body {
 @media(max-width: 3000px) {
   .projectContainer {
     padding: 60px;
+  }
+  .rockd-mobile {
+    background-image:url('/img/high/rockd-mobile.jpg');;
+  }
+  .rockd-web {
+    background-image:url('/img/high/rockd-web.jpg');;
+  }
+  .rockd-site {
+    background-image:url('/img/high/rockd-site.jpg');;
   }
   .geodeepdive {
     background-image:url('/img/high/geodeepdive.org.jpg');;
@@ -288,6 +298,15 @@ body {
   }
 }
 @media(max-width: 1450px) {
+  .rockd-mobile {
+    background-image:url('/img/medium/rockd-mobile.jpg');;
+  }
+  .rockd-web {
+    background-image:url('/img/medium/rockd-web.jpg');;
+  }
+  .rockd-site {
+    background-image:url('/img/medium/rockd-site.jpg');;
+  }
   .geodeepdive {
     background-image:url('/img/medium/geodeepdive.org.jpg');;
   }
@@ -382,6 +401,15 @@ body {
 @media(max-width: 900px) {
   .projectContainer {
     padding: 14px 25px;
+  }
+  .rockd-mobile {
+    background-image:url('/img/low/rockd-mobile.jpg');;
+  }
+  .rockd-web {
+    background-image:url('/img/low/rockd-web.jpg');;
+  }
+  .rockd-site {
+    background-image:url('/img/low/rockd-site.jpg');;
   }
   .geodeepdive {
     background-image:url('/img/low/geodeepdive.org.jpg');;

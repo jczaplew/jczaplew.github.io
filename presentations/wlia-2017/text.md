@@ -18,11 +18,11 @@ _Slide_
 Large is used for county or USGS quad level maps
 
 _Slide_
-I'd like to frame the motivation for the creation of this database around this question because in our age smartphones and immediate access to almost any information, it is surprisingly difficult to answer. So,
+I'd like to frame the motivation for the creation of this database around this question because in our age of smartphones and immediate access to almost any information, it is surprisingly difficult to answer. So,
 
 Does anyone know what kind of rock we are currently standing on? How old is it? If I wanted to learn more about, where would I look?
 
-Until we began assembling Macrostrat's geologic map database, these were questions that were not easy to answer. For example, to answer those questions, you could go to the National Geologic Map Database, _Slide_ zoom in to the Wisconsin Dells, _Slide_ and see what maps are available. If you did that, you would be presented with this nice map of the Quaternary geology of southeastern Wisconsin from 1918. _Slide_ You'd then have to download the 21 megabyte tiff file, open it up, and try and discern the colors to figure out which formation you might be standing on.
+Until we began assembling Macrostrat's geologic map database, these were questions that were surprisingly difficult to answer. For example, to answer those questions, you could go to the National Geologic Map Database, _Slide_ zoom in to the Wisconsin Dells, _Slide_ and see what maps are available. If you did that, you would be presented with this nice map of the Quaternary geology of southeastern Wisconsin from 1918. _Slide_ You'd then have to download the 21 megabyte tiff file, open it up, and try and discern the colors to figure out which formation you might be standing on.
 
 _Slide_
 Alternatively, you could Google something like "columbia county wisconsin geologic map" and not find much. Next, you might visit the Wisconsin Geological Survey's website, sort through a few pages of county geologic maps and realize they do not have one for Columbia county, and then shift your focus to a bedrock geology map of Wisconsin. _Slide_ Eventually, you might come across this map of Wisconsin, which you could use to get a coarse idea of what you might be standing on. If you're lucky, you might find the homogenized geologic map of the united states compiled by USGS (which is an excellent product!), download the shapefile and CSV attributes for Wisconsin, load them into your GIS, attach the attribute table, figure out where the Wisconsin Dells is, and query the layer.
@@ -95,7 +95,7 @@ Even with only a few people working on the map processing pipeline, staying orga
 
 _Slide_
 # Making a map
-Once the data has reached the database, we obviously want to display it and share it in a sensible way. _Slide_ Very early on in the project, we were approached by Shane Loeffler and Amy Myrbo from the University of Minnesota about an idea they had for a mobile application that allowed users to learn about the landscape they were seeing from the window of an airplane. They knew we had been building a geologic map database, and thought it would be cool if they get extracts of our maps for their application. With these needs in mind, we created an API that allowed them to submit either two points and a buffer radius, or a polygon and in return receive an extract of our homogenized geologic map as a GeoJSON or TopoJSON. After they visited us and we mocked up a simple demo, they ran with it and produced the app Flyover Country which you can download for ios or android today. The beauty of this distribution model is that as our maps improve, so does their app.
+Once the data has reached the database, we obviously want to display it and share it in a sensible way. _Slide_ Very early on in the project, we were approached by Shane Loeffler and Amy Myrbo from the University of Minnesota about an idea they had for a mobile application that allowed users to learn about the landscape they were seeing from the window of an airplane. They knew we had been building a geologic map database, and thought it would be cool if they get extracts of our maps for their application. With these needs in mind, we created an API that allowed them to submit either two points and a buffer radius, or a polygon and in return receive an extract of our homogenized geologic map as a GeoJSON or TopoJSON. After they visited us and we mocked up a simple demo, they ran with it and produced the app Flyover Country which you can download for iOS or Android today. The beauty of this distribution model is that as our maps improve, so does their app.
 
 _Slide_
 While this specific method is great for that type of application, it's not a great way to explore all of our geologic maps. Naturally, the next step was to tile the data. However, this presented some unique challenges.
@@ -133,14 +133,9 @@ Remember when I discussed our layering process for each map scale when creating 
 We'd also like to leverage these maps more on another project we are involved in, GeoDeepDive, which is a digital library for text mining. By mining the literature for data about known entities (for example, it is very straightforward to ask questions like "what are all the adjectives used to describe Baraboo Quartzite?"), we can refine and enhance the attributes we already have for our maps. In the other direction, data and knowledge contained within geologic maps can provide constraints on other applications. For example, if you are mining the literature for stratigraphic formations that contain sandstone, we can easily provide a list of stratigraphic names that we know to contain sandstone. Additionally, because the maps are spatial data, they can provide geographic constraints on potential facts extracted from the literature. This is a realm we have not explored much yet, but are very excited to push forward on.
 
 
-+ Add questions to the rock are we standing on - what is getting in the way of us answer this?
-  - Reshow the outline as we address these questions
-
 + Geologists use guidebooks
-+ Remove white space on slides
 
 + Refine use of the word scale (finer vs coarser)
-+ More explanation of the state line fault - differences reflect different divisions across time - different placing in time bins. Just say they have different names. Maybe use a different state line fault? Georgia
 
 + QGIS view for schema?
 
@@ -149,5 +144,3 @@ We'd also like to leverage these maps more on another project we are involved in
 + Github project is way too small
 
 + Add annotations to database assisted data entry
-
-+ Better description of GeoDeepDive - make it a slide? text mining of scientific documents
