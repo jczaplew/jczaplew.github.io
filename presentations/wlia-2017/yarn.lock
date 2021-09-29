@@ -2767,8 +2767,8 @@ hyphenate-style-name@^1.0.1:
   resolved "https://registry.yarnpkg.com/hyphenate-style-name/-/hyphenate-style-name-1.0.2.tgz#31160a36930adaf1fc04c6074f7eb41465d4ec4b"
 
 i@0.3.x:
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/i/-/i-0.3.5.tgz#1d2b854158ec8169113c6cb7f6b6801e99e211d5"
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/i/-/i-0.3.7.tgz#2a7437a923d59c14b17243dc63a549af24d85799"
 
 iconv-lite@~0.4.13:
   version "0.4.15"
@@ -4302,6 +4302,10 @@ prepend-http@^1.0.0:
 preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
+
+prism@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/prism/-/prism-1.0.0.tgz#c77c2a04aa2d4df9e303ef4dba2ba62c42eefb41"
 
 private@^0.1.6, private@~0.1.5:
   version "0.1.6"
