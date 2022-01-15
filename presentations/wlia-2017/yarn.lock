@@ -3421,8 +3421,8 @@ markdown-to-react-components@^0.2.3:
     marked "^0.3.3"
 
 marked@^0.3.2, marked@^0.3.3:
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
+  version "0.3.19"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.19.tgz#5d47f709c4c9fc3c216b6d46127280f40b39d790"
 
 math-expression-evaluator@^1.2.14:
   version "1.2.15"
@@ -4302,6 +4302,10 @@ prepend-http@^1.0.0:
 preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
+
+prism@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/prism/-/prism-1.0.0.tgz#c77c2a04aa2d4df9e303ef4dba2ba62c42eefb41"
 
 private@^0.1.6, private@~0.1.5:
   version "0.1.6"
